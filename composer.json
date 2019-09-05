@@ -4,14 +4,42 @@
     "keywords": ["spa", "laravel", "vue", "tailwind"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+      {
+        "type": "package",
+        "package": {
+          "name": "tymon/jwt-auth",
+          "type": "library",
+          "version": "1.0.0-rc.4.2",
+          "dist": {
+            "url": "https://github.com/tymondesigns/jwt-auth/archive/1.0.0-rc.4.1.zip",
+            "type": "zip"
+          },
+          "require": {
+            "illuminate/auth": "^6.0",
+            "illuminate/contracts": "^6.0",
+            "illuminate/http": "^6.0",
+            "illuminate/support": "^6.0",
+            "lcobucci/jwt": "^3.2",
+            "namshi/jose": "^7.0",
+            "nesbot/carbon": "^1.0 || ^2.0"
+          },
+          "autoload": {
+            "classmap": [
+              "src/"
+            ]
+          }
+        }
+      }
+    ],
     "require": {
-        "php": "^7.1.3",
+        "php": "^7.3",
         "fideloper/proxy": "^4.0",
         "laravel/dusk": "^5.1",
-        "laravel/framework": "5.8.*",
+        "laravel/framework": "^6.0",
         "laravel/socialite": "^4.0",
         "laravel/tinker": "^1.0",
-        "tymon/jwt-auth": "^1.0.0-rc.4.1"
+        "tymon/jwt-auth": "^1.0.0-rc.4.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

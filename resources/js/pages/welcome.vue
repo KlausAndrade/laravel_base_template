@@ -1,39 +1,33 @@
 <template>
-  <div class="h-screen">
-    <div class="top-right links">
-      <template v-if="authenticated">
-        <router-link :to="{ name: 'home' }">
-          {{ $t('home') }}
-        </router-link>
-      </template>
-      <template v-else>
-        <router-link :to="{ name: 'login' }">
-          {{ $t('login') }}
-        </router-link>
-        <router-link :to="{ name: 'register' }">
-          {{ $t('register') }}
-        </router-link>
-      </template>
-    </div>
-
-    <div class="container mx-auto h-full flex justify-center items-center">
-      <div class="w-1/3">
-        <div class="title text-center">
-          {{ title }}
-        </div>
-        <div class="font-hairline text-center">
-          <a href="https://github.com/shriker/laravel-vue-spa-tailwind">shriker/laravel-vue-spa-tailwind</a>
-        </div>
-      </div>
-    </div>
+  <div>
+    <hero></hero>
+    <cases></cases>
+    <services></services>
+    <pricing></pricing>
+    <call-to-action></call-to-action>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+  import { mapGetters } from 'vuex'
+  import Hero from './landing/hero'
+  import Cases from './landing/cases'
+  import Services from './landing/services'
+  import Pricing from './landing/pricing'
+  import CallToAction from './landing/call-to-action'
+  import Footer from './landing/footer'
 
 export default {
-  layout: 'basic',
+
+  components: {
+    Hero,
+    Cases,
+    Services,
+    Pricing,
+    CallToAction,
+    Footer
+  },
 
   metaInfo () {
     return { title: this.$t('home') }
@@ -49,7 +43,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+  .gradient {
+    background: linear-gradient(90deg, #38b2ac 0%, #2b847f 100%)
+  }
 .top-right {
   position: absolute;
   right: 10px;
