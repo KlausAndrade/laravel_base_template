@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/nav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Modal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,10 +138,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/pages/landing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -150,6 +152,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\pages\landing" />
       <recent name="C:\Users\klaus\code\base-template\resources\lang\pt" />
     </key>
@@ -185,7 +188,8 @@
       <workItem from="1567189080000" duration="1369000" />
       <workItem from="1567191978959" duration="232000" />
       <workItem from="1567342145150" duration="5623000" />
-      <workItem from="1567711514970" duration="5239000" />
+      <workItem from="1567711514970" duration="5423000" />
+      <workItem from="1567935633135" duration="7117000" />
     </task>
     <servers />
   </component>

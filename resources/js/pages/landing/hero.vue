@@ -7,11 +7,11 @@
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <p class="uppercase tracking-loose w-full">Gestão completa do seu alojamento</p>
-          <h1 class="my-4 text-5xl font-bold leading-tight">Rentabilize sua habitação sem esforço</h1>
-          <p class="leading-normal text-2xl mb-8">Faça dinheiro, sem dor de cabeça!</p>
+          <p class="uppercase tracking-loose w-full">{{$t('hero_heading')}}</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">{{$t('hero_title')}}</h1>
+          <p class="leading-normal text-2xl mb-8">{{$t('hero_subheading')}}</p>
 
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Contacte-nos</button>
+          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">{{$t('hero_contact')}}</button>
 
         </div>
         <!--Right Col-->
