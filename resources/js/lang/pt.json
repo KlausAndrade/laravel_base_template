@@ -43,15 +43,15 @@
   "hero_subheading": "Faça dinheiro, sem dor de cabeça!",
   "hero_contact": "Contacte-nos",
 
-  "cases_heading": "TTTITLE",
-  "cases_title_one": "Lorem ipsum dolor sit amet\n",
+  "why": "Por quê?",
+  "cases_title_one": "Zero preocupações",
   "cases_content_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
-  "cases_title_two": "Lorem ipsum dolor sit amet\n",
+  "cases_title_two": "Aumente seu rendimento\n",
   "cases_content_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
-  "cases_title_three": "Lorem ipsum dolor sit amet\n",
+  "cases_title_three": "10 anos de experiência",
   "cases_content_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
 
-  "services_heading": "Serviços",
+  "services": "Serviços",
   "services_title_one": "Manutenção",
   "services_heading_one": "Lorem ipsum",
   "services_content_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
@@ -71,11 +71,26 @@
   "services_heading_six": "Lorem ipsum",
   "services_content_six": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
 
+  "testimonials_heading": "Quem confiou está satifeito!",
+  "testimonials": "Recomendações",
+
+  "boats_heading": "Residencias no mar?",
+  "boats_title": "Também exploramos barcos e yachts",
+  "boats_subheading": "Entre em contato para mais informações",
+  "boats_contact": "Contacte-nos",
+
+  "contact": "Contacte-nos",
+  "pricing": "Preços",
   "pricing_title_six": "Consultoria imobiliária",
   "pricing_heading_six": "Lorem ipsum",
   "pricing_content_six": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
+  "per_month": "por mês",
 
   "action_subheading": "Gestão completa do seu alojamento",
   "action_heading": "Rentabilize sua habitação sem esforço",
-  "action_button": "Registrar!"
+
+  "houses": "Casas",
+  "who_we_are": "Quem somos",
+  "recommendations": "Recomendações",
+  "recommend_a_host": "Recomende um anfitrião"
 }

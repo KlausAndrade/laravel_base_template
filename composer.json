@@ -35,6 +35,7 @@
     "require": {
         "php": "^7.3",
         "fideloper/proxy": "^4.0",
+        "laravel/cashier": "^10.2",
         "laravel/dusk": "^5.1",
         "laravel/framework": "^6.0",
         "laravel/socialite": "^4.0",

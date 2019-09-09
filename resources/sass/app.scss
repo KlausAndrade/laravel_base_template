@@ -12,6 +12,9 @@
 @import 'tailwind/nav';
 @import 'elements/transitions';
 
+
+html{  scroll-behavior: smooth;}
+
 label {
   @apply text-gray-700 font-bold mb-2;
 }

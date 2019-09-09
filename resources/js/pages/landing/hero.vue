@@ -11,7 +11,7 @@
           <h1 class="my-4 text-5xl font-bold leading-tight">{{$t('hero_title')}}</h1>
           <p class="leading-normal text-2xl mb-8">{{$t('hero_subheading')}}</p>
 
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">{{$t('hero_contact')}}</button>
+          <button class="mx-auto lg:mx-0 gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">{{$t('hero_contact')}}</button>
 
         </div>
         <!--Right Col-->
