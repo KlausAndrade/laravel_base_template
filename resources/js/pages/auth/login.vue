@@ -35,8 +35,6 @@
             {{ $t('forgot_password') }}
           </router-link></div>
 
-          <!-- GitHub Login Button -->
-          <login-with-github />
         </div>
 
       </form>

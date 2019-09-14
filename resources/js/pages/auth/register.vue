@@ -51,8 +51,6 @@
               {{ $t('register') }}
             </tw-button>
 
-            <!-- GitHub Register Button -->
-            <login-with-github />
           </div>
         </div>
       </form>

@@ -2,29 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/RecommendForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/boats.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/testimonials.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/base-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/base-template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/update.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/products/create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/products/edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/products/form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/products/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/products/product.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/settings/manage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Modal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Modal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TwNavbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TwNavbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/.styleci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/Authenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/app/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/hashing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/public/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/public/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/server.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/tests/CreatesApplication.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/justbookit/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/middleware/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/middleware/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +256,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/pages/products" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,15 +267,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\products" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\settings" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\pages\landing" />
-      <recent name="C:\Users\klaus\code\base-template\resources\lang\pt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
     </key>
   </component>
   <component name="RunDashboard">

@@ -13,12 +13,22 @@ export default [
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
   { path: '/home', name: 'home', component: page('home.vue') },
+
+  // Products
+  { path: '/products', name: 'products', component: page('products/index.vue') },
+
   { path: '/settings',
     component: page('settings/index.vue'),
     children: [
       { path: '', redirect: { name: 'settings.profile' } },
       { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
-      { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
+      { path: 'password', name: 'settings.password', component: page('settings/password.vue') },
+      { path: 'manage',
+        name: 'settings.manage',
+        component: page('settings/manage.vue'),
+        meta: {
+          middleware: 'admin'
+        } }
     ] },
 
   { path: '*', component: page('errors/404.vue') }

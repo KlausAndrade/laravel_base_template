@@ -51,6 +51,11 @@ async function beforeEach (to, from, next) {
   let components = []
 
   try {
+    if (to.meta.middleware) {
+      const admin = store.getters['auth/role']
+      if (admin) next()
+      else next({ name: 'home' })
+    }
     // Get the matched components and resolve them.
     components = await resolveComponents(
       router.getMatchedComponents({ ...to })
