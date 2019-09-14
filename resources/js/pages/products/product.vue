@@ -23,6 +23,9 @@
           <div class="px-4 pt-3 pb-4 border-t border-gray-300 bg-gray-100">
             <div class="flex items-center justify-center pt-2">
               <TwButton>Comprar</TwButton>
+              <router-link v-if="$store.getters['auth/role']" class="font-bold ml-4" :to="{name: 'products.edit', params: { id: product.id }}">
+                Edit
+              </router-link>
             </div>
           </div>
         </div>
@@ -34,7 +37,7 @@
 <script>
 import TwButton from '../../components/TwButton'
 export default {
-  name: 'RecommendForm',
+  name: 'Product',
   components: { TwButton },
   props: ['product'],
   data () {

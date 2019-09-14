@@ -20,6 +20,12 @@ Route::group(['middleware' => 'auth:api'], function () {
         return $request->user();
     });
 
+    // Products
+    Route::post('products/store', 'ProductController@store');
+    Route::patch('products/update', 'ProductController@update');
+    Route::post('products/destroy', 'ProductController@destroy');
+
+    // Settings
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
     Route::patch('settings/manage/role', 'Settings\UserController@update');
