@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Modal from './Modal'
 import Card from './Card'
 import Child from './Child'
 import Button from './Button'
@@ -10,6 +11,7 @@ import TwCheckbox from './TwCheckbox'
 
 // Components that are registered globaly.
 [
+  Modal,
   TwCard,
   TwButton,
   TwCheckbox,
