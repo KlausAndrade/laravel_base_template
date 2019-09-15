@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use App\Products;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -21,7 +21,7 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -59,21 +59,21 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Products  $products
-     * @return \Illuminate\Http\Response
+     * @param Product $product
+     * @return array
      */
-    public function show(Products $products)
+    public function show(Product $product)
     {
-        //
+        return ['success' => true, 'data' => $product];
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Products  $products
-     * @return \Illuminate\Http\Response
+     * @param Product $product
+     * @return void
      */
-    public function edit(Products $products)
+    public function edit(Product $product)
     {
         //
     }
@@ -82,10 +82,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  \App\Products  $products
-     * @return \Illuminate\Http\Response
+     * @param Product $product
+     * @return void
      */
-    public function update(Request $request, Products $products)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -93,10 +93,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Products  $products
-     * @return \Illuminate\Http\Response
+     * @param Product $product
+     * @return void
      */
-    public function destroy(Products $products)
+    public function destroy(Product $product)
     {
         //
     }
