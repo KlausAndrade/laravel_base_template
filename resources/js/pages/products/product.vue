@@ -4,7 +4,7 @@
       <div class="w-full sm:w-full lg:w-full py-6 px-3">
         <div class="bg-white shadow-xl rounded-lg overflow-hidden">
           <div class="bg-cover bg-center h-56 p-4" style="background-image: url(https://via.placeholder.com/450x450)">
-            <div v-if="$store.getters['auth/role']">
+            <div v-if="$store.getters['auth/role']" class="text-right">
               <input v-model="product.active" type="checkbox" @click="updateActive(product)">
             </div>
           </div>

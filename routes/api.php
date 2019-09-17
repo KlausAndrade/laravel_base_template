@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('products/edit', 'ProductController@edit');
     Route::patch('products/update', 'ProductController@update');
     Route::patch('products/updateActive', 'ProductController@updateActive');
-    Route::post('products/destroy', 'ProductController@destroy');
+    Route::delete('products/destroy/{product}', 'ProductController@destroy');
 
     // Settings
     Route::patch('settings/profile', 'Settings\ProfileController@update');

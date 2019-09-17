@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Loader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/reset.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/reset.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/products/edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/edit.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/products/product-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/product-form.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/products/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/products.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -229,6 +216,7 @@
       <workItem from="1568540276045" duration="5428000" />
       <workItem from="1568664283556" duration="679000" />
       <workItem from="1568736622908" duration="7173000" />
+      <workItem from="1568754911147" duration="3228000" />
     </task>
     <servers />
   </component>

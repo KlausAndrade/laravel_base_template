@@ -41,6 +41,9 @@
       <tw-button :loading="form.busy">
         {{ $t('add') }}
       </tw-button>
+      <a v-if="productId" class="text-pink-400 font-bold" :loading="form.busy" @click="deleteProduct">
+        {{ $t('delete') }}
+      </a>
     </div>
   </form>
 </template>
@@ -49,11 +52,12 @@
 import Form from 'vform'
 import TwButton from '../../components/TwButton'
 import Loader from '../../components/Loader'
+import axios from 'axios'
 
 export default {
   name: 'ProductForm',
   components: { Loader, TwButton },
-  props: ['product', 'type'],
+  props: ['productId', 'type'],
   data: () => ({
     form: new Form({
       name: '',
@@ -65,6 +69,9 @@ export default {
     remember: false,
     isLoading: false
   }),
+  mounted () {
+    if (this.productId != null) this.getProduct()
+  },
   methods: {
     async updateProduct () {
       this.isLoading = true
@@ -82,6 +89,43 @@ export default {
     onFileSelected (e) {
       this.imgUrl = URL.createObjectURL(e.target.files[0])
       this.form.image.push(e.target.files[0])
+    },
+
+    async getProduct () {
+      try {
+        const { data } = await axios.get(`/api/products/${this.productId}`)
+
+        this.form.name = data.data.name
+        this.form.price = data.data.price
+        this.form.description = data.data.description
+        this.form.image = data.data.image
+
+        this.isLoading = false
+      } catch (error) {
+        this.error = this.$t('product_not_found')
+        this.isLoading = false
+      }
+    },
+
+    async deleteProduct () {
+      try {
+        if (confirm(this.$t('are_you_sure'))) {
+          const { data } = await axios.delete(`/api/products/destroy/${this.productId}`)
+
+          if (data.success) {
+            this.$toasted.success(this.$t('product_deleted'))
+            this.$router.push({ name: 'products.products' })
+          } else {
+            this.$toasted.error(this.$t('something_went_wrong'))
+          }
+
+          this.isLoading = false
+        }
+        return
+      } catch (error) {
+        this.error = this.$t('product_not_found')
+        this.isLoading = false
+      }
     }
   }
 }

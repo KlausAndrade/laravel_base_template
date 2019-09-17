@@ -19,7 +19,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ['success' => true, 'data' => Product::all()];
+        return ['success' => true, 'data' => Product::orderBy('created_at','desc')->get()];
     }
 
     /**
