@@ -6,7 +6,7 @@
         <div class="mt-4">
           <label class="col-md-3 col-form-label text-md-right mb-2" for="email">{{ $t('email') }}</label>
           <div class="col-md-7">
-            <input id="email" v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-input" type="email" name="email" placeholder="username@example.com" required autocomplete="email">
+            <input id="email" v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-input w-full" type="email" name="email" placeholder="username@example.com" required autocomplete="email">
             <has-error :form="form" field="email" />
           </div>
         </div>
@@ -15,7 +15,7 @@
         <div class="mt-4">
           <label class="col-md-3 col-form-label text-md-right" for="password">{{ $t('password') }}</label>
           <div class="col-md-7">
-            <input id="password" v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-input" type="password" name="password" required autocomplete="current-password">
+            <input id="password" v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-input w-full" type="password" name="password" required autocomplete="current-password">
             <has-error :form="form" field="password" />
           </div>
         </div>

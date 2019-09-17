@@ -21,10 +21,12 @@ Route::group(['middleware' => 'auth:api'], function () {
     });
 
     // Products
+    Route::get('products', 'ProductController@index');
     Route::get('products/{product}', 'ProductController@show');
     Route::post('products/store', 'ProductController@store');
     Route::get('products/edit', 'ProductController@edit');
     Route::patch('products/update', 'ProductController@update');
+    Route::patch('products/updateActive', 'ProductController@updateActive');
     Route::post('products/destroy', 'ProductController@destroy');
 
     // Settings

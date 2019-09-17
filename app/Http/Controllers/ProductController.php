@@ -8,24 +8,18 @@ use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return array
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
+        return ['success' => true, 'data' => Product::all()];
     }
 
     /**
@@ -68,17 +62,6 @@ class ProductController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Product $product
-     * @return void
-     */
-    public function edit(Product $product)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param Request $request
@@ -87,17 +70,36 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->update($request->all());
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param Product $product
+     * @return array
+     */
+    public function updateActive(Request $request, Product $product)
+    {
+
+        $product = Product::where('id', $request->id)->update(['active' => $request->active]);
+
+        return ['success' => true, 'data' => $product];
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Product $product
-     * @return void
+     * @return array
+     * @throws \Exception
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return ['success' => true];
+
     }
 }

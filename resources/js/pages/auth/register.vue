@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto flex justify-center items-center">
+  <div class="sm:w-full max-w-md mx-auto">
     <tw-card v-if="mustVerifyEmail" :title="$t('register')">
       <div class="alert alert-success" role="alert">
         {{ $t('verify_email_address') }}
@@ -12,7 +12,7 @@
         <div class="mt-4">
           <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
           <div class="col-md-7">
-            <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-input" type="text" name="name" required autocomplete="username">
+            <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-input w-full" type="text" name="name" required autocomplete="username">
             <has-error :form="form" field="name" />
           </div>
         </div>
@@ -21,7 +21,7 @@
         <div class="mt-4">
           <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
           <div class="col-md-7">
-            <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-input" type="email" name="email" required autocomplete="email">
+            <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-input w-full" type="email" name="email" required autocomplete="email">
             <has-error :form="form" field="email" />
           </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="mt-4">
           <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
           <div class="col-md-7">
-            <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-input" type="password" name="password" required autocomplete="new-password">
+            <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-input w-full" type="password" name="password" required autocomplete="new-password">
             <has-error :form="form" field="password" />
           </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="mt-4">
           <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
           <div class="col-md-7">
-            <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-input" type="password" required name="password_confirmation" autocomplete="new-password">
+            <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-input w-full" type="password" required name="password_confirmation" autocomplete="new-password">
             <has-error :form="form" field="password_confirmation" />
           </div>
         </div>

@@ -18,3 +18,7 @@ html{  scroll-behavior: smooth;}
 label {
   @apply text-gray-700 font-bold mb-2;
 }
+
+.toasted .primary.success, .toasted.toasted-primary.success{
+  background: #38b2ac;
+}

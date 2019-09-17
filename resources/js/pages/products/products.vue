@@ -15,45 +15,32 @@
 
 <script>
 import Product from './product'
+import axios from 'axios'
 
 export default {
   name: 'Products',
   components: { Product },
   data () {
     return {
-      products: [
-        {
-          id: '1',
-          name: 'House xyz',
-          price: 12.20,
-          image: 'path/to/img',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac hendrerit nulla. Mauris condimentum cursus sem, non sagittis quam auctor vitae. Cras odio felis, dapibus eu magna vitae, rhoncus hendrerit nibh. Donec fermentum malesuada ante, sit amet fermentum orci pellentesque consequat. Nulla posuere pharetra nunc non dapibus. Nam maximus feugiat elementum. Vestibulum sit amet felis neque. Ut nec auctor turpis.'
-        },
-        {
-          id: '2',
-          name: 'House xyz',
-          price: 12.20,
-          image: 'path/to/img',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac hendrerit nulla. Mauris condimentum cursus sem, non sagittis quam auctor vitae. Cras odio felis, dapibus eu magna vitae, rhoncus hendrerit nibh. Donec fermentum malesuada ante, sit amet fermentum orci pellentesque consequat. Nulla posuere pharetra nunc non dapibus. Nam maximus feugiat elementum. Vestibulum sit amet felis neque. Ut nec auctor turpis.'
-        },
-        {
-          id: '3',
-          name: 'House xyz',
-          price: 12.20,
-          image: 'path/to/img',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac hendrerit nulla. Mauris condimentum cursus sem, non sagittis quam auctor vitae. Cras odio felis, dapibus eu magna vitae, rhoncus hendrerit nibh. Donec fermentum malesuada ante, sit amet fermentum orci pellentesque consequat. Nulla posuere pharetra nunc non dapibus. Nam maximus feugiat elementum. Vestibulum sit amet felis neque. Ut nec auctor turpis.'
-        },
-        {
-          id: '4',
-          name: 'House xyz',
-          price: 12.20,
-          image: 'path/to/img',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac hendrerit nulla. Mauris condimentum cursus sem, non sagittis quam auctor vitae. Cras odio felis, dapibus eu magna vitae, rhoncus hendrerit nibh. Donec fermentum malesuada ante, sit amet fermentum orci pellentesque consequat. Nulla posuere pharetra nunc non dapibus. Nam maximus feugiat elementum. Vestibulum sit amet felis neque. Ut nec auctor turpis.'
-        }
-      ]
+      products: []
     }
   },
+  mounted () {
+    this.getProduct()
+  },
+
   methods: {
+    async getProduct () {
+      try {
+        const { data } = await axios.get('/api/products')
+        this.products = data.data
+        this.isLoading = false
+      } catch (error) {
+        this.error = this.$t('product_not_found')
+        this.isLoading = false
+      }
+    },
+
     goTo (path) {
       this.$router.push(path)
     }
