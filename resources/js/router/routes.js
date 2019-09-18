@@ -37,6 +37,29 @@ export default [
     ]
   },
 
+  // Houses
+  { path: '/houses',
+    component: page('houses/index.vue'),
+    children: [
+      { path: '', redirect: { name: 'houses.houses' } },
+      { path: '', name: 'houses.houses', component: page('houses/houses.vue') },
+      { path: 'create',
+        name: 'houses.create',
+        component: page('houses/create.vue'),
+        meta: {
+          middleware: 'admin'
+        }
+      },
+      { path: 'edit/:id',
+        name: 'houses.edit',
+        component: page('houses/edit.vue'),
+        meta: {
+          middleware: 'admin'
+        }
+      }
+    ]
+  },
+
   { path: '/settings',
     component: page('settings/index.vue'),
     children: [

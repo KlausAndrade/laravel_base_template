@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="" />
+    <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/house-form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/houses.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HouseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HouseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/product-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/product-form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/products.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +166,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -156,16 +180,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
-      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\products" />
-      <recent name="C:\Users\klaus\code\base-template\resources\js\pages" />
-      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\settings" />
-      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\landing" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
       <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\products" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\settings" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\landing" />
     </key>
   </component>
   <component name="RunDashboard">

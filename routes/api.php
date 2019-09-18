@@ -25,9 +25,22 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('products/{product}', 'ProductController@show');
     Route::post('products/store', 'ProductController@store');
     Route::get('products/edit', 'ProductController@edit');
-    Route::patch('products/update', 'ProductController@update');
+    Route::post('products/{product}/images', 'ProductController@uploadImages');
+    Route::delete('products/{product}/image/{image}', 'ProductController@removeImage');
+    Route::patch('products/update/{product}', 'ProductController@update');
     Route::patch('products/updateActive', 'ProductController@updateActive');
     Route::delete('products/destroy/{product}', 'ProductController@destroy');
+
+    // Houses
+    Route::get('houses', 'HouseController@index');
+    Route::get('houses/{house}', 'HouseController@show');
+    Route::post('houses/store', 'HouseController@store');
+    Route::get('houses/edit', 'HouseController@edit');
+    Route::post('houses/{house}/images', 'HouseController@uploadImages');
+    Route::delete('houses/{house}/image/{image}', 'HouseController@removeImage');
+    Route::patch('houses/update/{house}', 'HouseController@update');
+    Route::patch('houses/updateActive', 'HouseController@updateActive');
+    Route::delete('houses/destroy/{house}', 'HouseController@destroy');
 
     // Settings
     Route::patch('settings/profile', 'Settings\ProfileController@update');
