@@ -2,41 +2,41 @@
   <section id="services" class="bg-white border-b py-8">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
       <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-        {{ $t('products') }}
+        {{ $t('houses') }}
       </h1>
       <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
       </div>
 
-      <product v-for="(product, i) in products" :key="i" :product="product" />
+      <house v-for="(house, i) in houses" :key="i" :house="house" />
     </div>
   </section>
 </template>
 
 <script>
-import Product from './product'
+import House from './house'
 import axios from 'axios'
 
 export default {
-  name: 'Products',
-  components: { Product },
+  name: 'Houses',
+  components: { House },
   data () {
     return {
-      products: []
+      houses: []
     }
   },
   mounted () {
-    this.getProduct()
+    this.getHouse()
   },
 
   methods: {
-    async getProduct () {
+    async getHouse () {
       try {
-        const { data } = await axios.get('/api/products')
-        this.products = data.data
+        const { data } = await axios.get('/api/houses')
+        this.houses = data.data
         this.isLoading = false
       } catch (error) {
-        this.error = this.$t('product_not_found')
+        this.error = this.$t('house_not_found')
         this.isLoading = false
       }
     },

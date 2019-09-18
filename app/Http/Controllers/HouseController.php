@@ -3,83 +3,138 @@
 namespace App\Http\Controllers;
 
 use App\House;
+use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class HouseController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return array
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return ['success' => true, 'data' => House::orderBy('created_at','desc')->with('image')->get()];
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return array
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $validData = request()->validate([
+            'name' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+        ]);
+
+        $house = House::create($validData);
+
+        $hasImage = request()->validate([
+            'image' => 'nullable'
+        ]);
+
+        if(!is_null($hasImage['image']))
+        {
+            $house->image()->create([$hasImage]);
+        }
+
+        return ['success' => true, 'data' => $house];
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\House  $house
-     * @return \Illuminate\Http\Response
+     * @param House $house
+     * @return array
      */
     public function show(House $house)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\House  $house
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(House $house)
-    {
-        //
+        $house->load('image');
+        return ['success' => true, 'data' => $house];
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\House  $house
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param House $house
+     * @return void
      */
-    public function update(Request $request, House $house)
+    public function update(House $house)
     {
-        //
+
+        $house->update(request()->except('image'));
+
+        return response()->json(['success'=> true], 200);
+
+    }
+
+    public function uploadImages(House $house){
+
+        $images = Collection::wrap(request()->file('file'));
+
+
+        $images->each(function ($image) use ($house) {
+
+            $path = "/dist/img/houses/{$house->id}/";
+            $imageName = Str::random();
+            $original = "{$imageName}.". $image->getClientOriginalExtension();
+
+            $image->move(public_path($path), $original);
+
+            $house->image()->create(['url' => $path.$original]);
+        });
+
+        return response()->json(['success' => true, 'data' => 'ok'], 200);
+
+    }
+
+
+    public function removeImage(House $house, Image $image){
+
+        $image->delete();
+
+        return response()->json(['success'=> true], 200);
+
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param House $house
+     * @return array
+     */
+    public function updateActive(Request $request, House $house)
+    {
+
+        $house = House::where('id', $request->id)->update(['active' => $request->active]);
+
+        return ['success' => true, 'data' => $house];
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\House  $house
-     * @return \Illuminate\Http\Response
+     * @param House $house
+     * @return array
+     * @throws \Exception
      */
     public function destroy(House $house)
     {
-        //
+        $house->delete();
+
+        return ['success' => true];
+
     }
 }

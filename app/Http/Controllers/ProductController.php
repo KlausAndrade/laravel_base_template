@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Image;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('admin')->except('index');
     }
     /**
      * Display a listing of the resource.
@@ -19,7 +21,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ['success' => true, 'data' => Product::orderBy('created_at','desc')->get()];
+        return ['success' => true, 'data' => Product::orderBy('created_at','desc')->with('image')->get()];
     }
 
     /**
@@ -58,6 +60,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+        $product->load('image');
         return ['success' => true, 'data' => $product];
     }
 
@@ -68,9 +71,42 @@ class ProductController extends Controller
      * @param Product $product
      * @return void
      */
-    public function update(Request $request, Product $product)
+    public function update(Product $product)
     {
-        $product->update($request->all());
+
+        $product->update(request()->except('image'));
+
+        return response()->json(['success'=> true], 200);
+
+    }
+
+    public function uploadImages(Product $product){
+
+        $images = Collection::wrap(request()->file('file'));
+
+
+        $images->each(function ($image) use ($product) {
+
+            $path = "/dist/img/products/{$product->id}/";
+            $imageName = Str::random();
+            $original = "{$imageName}.". $image->getClientOriginalExtension();
+
+            $image->move(public_path($path), $original);
+
+            $product->image()->create(['url' => $path.$original]);
+        });
+
+        return response()->json(['success' => true, 'data' => 'ok'], 200);
+
+    }
+
+
+    public function removeImage(Product $product, Image $image){
+
+        $image->delete();
+
+        return response()->json(['success'=> true], 200);
+
     }
 
     /**
