@@ -14,6 +14,16 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -117,22 +127,45 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Q9iBfk2ltycRSXVxkSYsAw2ENk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/pt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\klaus\code\base-template\resources\lang\pt" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\products" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\settings" />
+      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\landing" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -165,11 +198,32 @@
       <updated>1567189078865</updated>
       <workItem from="1567189080000" duration="1369000" />
       <workItem from="1567191978959" duration="232000" />
-      <workItem from="1567342145150" duration="4723000" />
+      <workItem from="1567342145150" duration="5623000" />
+      <workItem from="1567711514970" duration="5423000" />
+      <workItem from="1567935633135" duration="7847000" />
+      <workItem from="1568047605470" duration="11461000" />
+      <workItem from="1568481891911" duration="11465000" />
+      <workItem from="1568540276045" duration="5428000" />
+      <workItem from="1568664283556" duration="679000" />
+      <workItem from="1568736622908" duration="7173000" />
+      <workItem from="1568754911147" duration="3228000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

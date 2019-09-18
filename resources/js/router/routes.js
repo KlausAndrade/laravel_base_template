@@ -12,13 +12,43 @@ export default [
   { path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue') },
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
-  { path: '/home', name: 'home', component: page('home.vue') },
+  { path: '/home', name: 'home', redirect: { name: 'welcome' } },
+
+  // Products
+  { path: '/products',
+    component: page('products/index.vue'),
+    children: [
+      { path: '', redirect: { name: 'products.products' } },
+      { path: '', name: 'products.products', component: page('products/products.vue') },
+      { path: 'create',
+        name: 'products.create',
+        component: page('products/create.vue'),
+        meta: {
+          middleware: 'admin'
+        }
+      },
+      { path: 'edit/:id',
+        name: 'products.edit',
+        component: page('products/edit.vue'),
+        meta: {
+          middleware: 'admin'
+        }
+      }
+    ]
+  },
+
   { path: '/settings',
     component: page('settings/index.vue'),
     children: [
       { path: '', redirect: { name: 'settings.profile' } },
       { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
-      { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
+      { path: 'password', name: 'settings.password', component: page('settings/password.vue') },
+      { path: 'manage',
+        name: 'settings.manage',
+        component: page('settings/manage.vue'),
+        meta: {
+          middleware: 'admin'
+        } }
     ] },
 
   { path: '*', component: page('errors/404.vue') }

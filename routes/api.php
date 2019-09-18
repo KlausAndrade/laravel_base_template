@@ -20,8 +20,19 @@ Route::group(['middleware' => 'auth:api'], function () {
         return $request->user();
     });
 
+    // Products
+    Route::get('products', 'ProductController@index');
+    Route::get('products/{product}', 'ProductController@show');
+    Route::post('products/store', 'ProductController@store');
+    Route::get('products/edit', 'ProductController@edit');
+    Route::patch('products/update', 'ProductController@update');
+    Route::patch('products/updateActive', 'ProductController@updateActive');
+    Route::delete('products/destroy/{product}', 'ProductController@destroy');
+
+    // Settings
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
+    Route::patch('settings/manage/role', 'Settings\UserController@update');
 });
 
 Route::group(['middleware' => 'guest:api'], function () {
