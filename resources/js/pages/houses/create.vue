@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <house-form :house="house" />
+      <house-form :house-id="house" type="create" />
     </section>
   </tw-card>
 </template>

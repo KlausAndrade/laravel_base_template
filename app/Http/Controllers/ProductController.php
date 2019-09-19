@@ -40,15 +40,6 @@ class ProductController extends Controller
 
         $product = Product::create($validData);
 
-        $hasImage = request()->validate([
-            'image' => 'nullable'
-        ]);
-
-        if(!is_null($hasImage['image']))
-        {
-            $product->image()->create([$hasImage]);
-        }
-
         return ['success' => true, 'data' => $product];
     }
 
@@ -81,6 +72,8 @@ class ProductController extends Controller
     }
 
     public function uploadImages(Product $product){
+
+        request()->validate(['file' => 'image']);
 
         $images = Collection::wrap(request()->file('file'));
 

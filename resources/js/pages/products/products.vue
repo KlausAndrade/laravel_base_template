@@ -26,11 +26,11 @@ export default {
     }
   },
   mounted () {
-    this.getProduct()
+    this.getProducts()
   },
 
   methods: {
-    async getProduct () {
+    async getProducts () {
       try {
         const { data } = await axios.get('/api/products')
         this.products = data.data

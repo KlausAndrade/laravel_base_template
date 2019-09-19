@@ -16,24 +16,26 @@ class CreateHousesTable extends Migration
         Schema::create('houses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('country');
-            $table->string('address');
-            $table->string('number');
-            $table->string('city');
-            $table->string('state');
-            $table->string('zipcode');
-            $table->enum('type', ['house', 'apartment']);
-            $table->enum('space', ['entire', 'private-room','shared-room']);
-            $table->boolean('dedicated');
-            $table->float('price');
-            $table->date('checkin');
-            $table->date('checkout');
-            $table->integer('guests');
-            $table->integer('rooms');
+            $table->string('country')->nullable();
+            $table->string('address')->nullable();
+            $table->string('number')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('zipcode')->nullable();
+            $table->enum('type', ['house', 'apartment'])->nullable();
+            $table->enum('space', ['entire', 'private-room','shared-room'])->nullable();
+            $table->boolean('dedicated')->nullable();
+            $table->float('price')->nullable();
+            $table->date('checkin')->nullable();
+            $table->date('checkout')->nullable();
+            $table->integer('guests')->nullable();
+            $table->integer('rooms')->nullable();
             $table->longText('description');
             $table->boolean('active')->default(true);;
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

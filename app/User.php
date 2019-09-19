@@ -108,4 +108,16 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     {
         return [];
     }
+
+    /*User relations*/
+
+    /**
+     * Get all houses owner by the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function house()
+    {
+        return $this->hasMany(House::class, 'user_id')->latest('updated_at');
+    }
 }
