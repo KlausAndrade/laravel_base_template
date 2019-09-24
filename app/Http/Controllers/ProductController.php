@@ -6,6 +6,7 @@ use App\Product;
 use App\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 
 class ProductController extends Controller
@@ -52,6 +53,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $product->load('image');
+        $product->stripe = Config::get('services.stripe.key');
         return ['success' => true, 'data' => $product];
     }
 

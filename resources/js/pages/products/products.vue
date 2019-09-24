@@ -25,7 +25,7 @@ export default {
       products: []
     }
   },
-  mounted () {
+  beforeMount () {
     this.getProducts()
   },
 
