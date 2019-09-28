@@ -17,13 +17,19 @@
               </div>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">
-                  Thing
+                  Análise de mercado (preços, taxas de ocupação, etc.)
                 </li>
                 <li class="border-b py-4">
-                  Thing
+                  Presença nos principais sites de reservas Internacionais.
                 </li>
                 <li class="border-b py-4">
-                  Thing
+                  Divulgação nas redes sociais e SEO.
+                </li>
+                <li class="border-b py-4">
+                  Construção dos anúncios nas principais plataformas internacionais.
+                </li>
+                <li class="border-b py-4">
+                  Divulgação nas redes sociais e SEO.
                 </li>
               </ul>
             </div>

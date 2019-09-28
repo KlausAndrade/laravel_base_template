@@ -20,6 +20,7 @@ export default [
     children: [
       { path: '', redirect: { name: 'products.products' } },
       { path: '', name: 'products.products', component: page('products/products.vue') },
+      { path: ':id', name: 'products.show', component: page('products/show.vue') },
       { path: 'create',
         name: 'products.create',
         component: page('products/create.vue'),

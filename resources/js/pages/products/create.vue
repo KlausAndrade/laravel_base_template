@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <product-form :product="product" />
+      <product-form :product-id="product" type="create" />
     </section>
   </tw-card>
 </template>

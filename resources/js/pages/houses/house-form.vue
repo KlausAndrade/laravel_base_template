@@ -11,6 +11,14 @@
         <has-error :form="form" field="name" />
       </div>
     </div>
+    <!-- Address -->
+    <div class="mt-4">
+      <label class="col-md-3 col-form-label text-md-right mb-2" for="address">{{ $t('address') }}</label>
+      <div class="col-md-7">
+        <input id="address" v-model="form.address" :class="{ 'is-invalid': form.errors.has('address') }" class="form-input w-full" type="text" name="address" placeholder="Address" required>
+        <has-error :form="form" field="address" />
+      </div>
+    </div>
     <!-- Country -->
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="country">{{ $t('country') }}</label>
@@ -55,24 +63,38 @@
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="type">{{ $t('type') }}</label>
       <div class="col-md-7">
-        <input id="type" v-model="form.type" :class="{ 'is-invalid': form.errors.has('type') }" class="form-input w-full" type="text" name="type" placeholder="Type" required>
-        <has-error :form="form" field="type" />
+        <select id="type" v-model="form.type" class="form-select w-full" required>
+          <option value="house">
+            House
+          </option>
+          <option value="apartment">
+            Apartment
+          </option>
+        </select>
       </div>
     </div>
     <!-- Space -->
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="space">{{ $t('space') }}</label>
       <div class="col-md-7">
-        <input id="space" v-model="form.space" :class="{ 'is-invalid': form.errors.has('space') }" class="form-input w-full" type="text" name="space" placeholder="Space" required>
-        <has-error :form="form" field="space" />
+        <select id="space" v-model="form.space" class="form-select w-full" required>
+          <option value="entire-place">
+            Entire place
+          </option>
+          <option value="private-room">
+            Private room
+          </option>
+          <option value="shared-room">
+            Shared room
+          </option>
+        </select>
       </div>
     </div>
     <!-- Dedicated -->
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="dedicated">{{ $t('dedicated') }}</label>
       <div class="col-md-7">
-        <input id="dedicated" v-model="form.dedicated" :class="{ 'is-invalid': form.errors.has('dedicated') }" class="form-input w-full" type="text" name="dedicated" placeholder="Dedicated" required>
-        <has-error :form="form" field="dedicated" />
+        <input id="dedicated" v-model="form.dedicated" class="form-checkbox" type="checkbox" name="dedicated">
       </div>
     </div>
     <!-- Price -->
@@ -87,7 +109,7 @@
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="checkin">{{ $t('checkin') }}</label>
       <div class="col-md-7">
-        <input id="checkin" v-model="form.checkin" :class="{ 'is-invalid': form.errors.has('checkin') }" class="form-input w-full" type="text" name="checkin" placeholder="Checkin" required>
+        <input id="checkin" v-model="form.checkin" :class="{ 'is-invalid': form.errors.has('checkin') }" class="form-input w-full" type="date" name="checkin" placeholder="Checkin" required>
         <has-error :form="form" field="checkin" />
       </div>
     </div>
@@ -95,7 +117,7 @@
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="checkout">{{ $t('checkout') }}</label>
       <div class="col-md-7">
-        <input id="checkout" v-model="form.checkout" :class="{ 'is-invalid': form.errors.has('checkout') }" class="form-input w-full" type="text" name="checkout" placeholder="Checkout" required>
+        <input id="checkout" v-model="form.checkout" :class="{ 'is-invalid': form.errors.has('checkout') }" class="form-input w-full" type="date" name="checkout" placeholder="Checkout" required>
         <has-error :form="form" field="checkout" />
       </div>
     </div>
@@ -103,7 +125,7 @@
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="guests">{{ $t('guests') }}</label>
       <div class="col-md-7">
-        <input id="guests" v-model="form.guests" :class="{ 'is-invalid': form.errors.has('guests') }" class="form-input w-full" type="text" name="guests" placeholder="Guests" required>
+        <input id="guests" v-model="form.guests" :class="{ 'is-invalid': form.errors.has('guests') }" class="form w-full" type="number" name="guests" placeholder="Guests" required>
         <has-error :form="form" field="guests" />
       </div>
     </div>
@@ -111,7 +133,7 @@
     <div class="mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="rooms">{{ $t('rooms') }}</label>
       <div class="col-md-7">
-        <input id="rooms" v-model="form.rooms" :class="{ 'is-invalid': form.errors.has('rooms') }" class="form-input w-full" type="text" name="rooms" placeholder="Rooms" required>
+        <input id="rooms" v-model="form.rooms" :class="{ 'is-invalid': form.errors.has('rooms') }" class="form-input w-full" type="number" name="rooms" placeholder="Rooms" required>
         <has-error :form="form" field="rooms" />
       </div>
     </div>
@@ -175,7 +197,7 @@ export default {
       zipcode: '',
       type: '',
       space: '',
-      dedicated: '',
+      dedicated: false,
       price: '',
       checkin: '',
       checkout: '',
@@ -188,9 +210,11 @@ export default {
   }),
   mounted () {
     this.dropzone = new Dropzone(this.$refs.imageUpload, {
-      url: `/api/houses/${this.houseId}/images`
+      url: `/api/houses/${this.houseId}/images`,
+      acceptedFiles: 'image/*',
+      autoProcessQueue: this.type === 'edit'
     })
-    if (this.houseId != null) this.getHouse()
+    if (this.type === 'edit') this.getHouse()
   },
   methods: {
     handleHouse () {
@@ -200,10 +224,6 @@ export default {
       else this.updateHouse()
 
       this.isLoading = false
-    },
-    onFileSelected (e) {
-      this.imgUrl = URL.createObjectURL(e.target.files[0])
-      this.form.image.push(e.target.files[0])
     },
 
     async getHouse () {
@@ -246,6 +266,8 @@ export default {
       const { data } = await this.form.post('/api/houses/store')
 
       if (data.success) {
+        this.dropzone.options.url = `/api/houses/${data.data.id}/images`
+        this.dropzone.processQueue()
         this.$toasted.success(this.$t('house_registered'))
       } else {
         this.$toasted.error(this.$t('something_went_wrong'))

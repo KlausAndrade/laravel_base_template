@@ -39,10 +39,7 @@
                 <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Facebook</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Linkedin</a>
-              </li>
-              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Twitter</a>
+                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Instagram</a>
               </li>
             </ul>
           </div>

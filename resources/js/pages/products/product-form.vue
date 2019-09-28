@@ -79,9 +79,11 @@ export default {
   }),
   mounted () {
     this.dropzone = new Dropzone(this.$refs.imageUpload, {
-      url: `/api/products/${this.productId}/images`
+      url: `/api/products/${this.productId}/images`,
+      acceptedFiles: 'image/*',
+      autoProcessQueue: this.type === 'edit'
     })
-    if (this.productId != null) this.getProduct()
+    if (this.type === 'edit') this.getProduct()
   },
   methods: {
     handleProduct () {
@@ -91,10 +93,6 @@ export default {
       else this.updateProduct()
 
       this.isLoading = false
-    },
-    onFileSelected (e) {
-      this.imgUrl = URL.createObjectURL(e.target.files[0])
-      this.form.image.push(e.target.files[0])
     },
 
     async getProduct () {
@@ -127,7 +125,6 @@ export default {
 
           this.isLoading = false
         }
-        return
       } catch (error) {
         this.error = this.$t('product_not_found')
         this.isLoading = false
@@ -137,6 +134,9 @@ export default {
       const { data } = await this.form.post('/api/products/store')
 
       if (data.success) {
+        this.dropzone.options.url = `/api/products/${data.data.id}/images`
+        this.dropzone.processQueue()
+
         this.$toasted.success(this.$t('product_registered'))
       } else {
         this.$toasted.error(this.$t('something_went_wrong'))

@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <house-form :house-id="this.$route.params.id" />
+      <house-form :house-id="this.$route.params.id" type="edit" />
     </section>
   </tw-card>
 </template>

@@ -10,7 +10,7 @@
         </div>
       </div>
 
-      <product-form :product-id="this.$route.params.id" />
+      <product-form :product-id="this.$route.params.id" type="edit" />
     </section>
   </tw-card>
 </template>

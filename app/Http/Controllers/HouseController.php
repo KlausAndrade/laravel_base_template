@@ -32,21 +32,25 @@ class HouseController extends Controller
     public function store()
     {
         $validData = request()->validate([
-            'name' => 'required',
-            'price' => 'required',
-            'description' => 'required',
+            "address" =>'required',
+            "checkin" =>'required',
+            "checkout" =>'required',
+            "city" =>'required',
+            "country" =>'required',
+            "dedicated" =>'required',
+            "description" =>'required',
+            "guests" =>'required',
+            "name" =>'required',
+            "number" =>'required',
+            "price" =>'required',
+            "rooms" =>'required',
+            "space" =>'required',
+            "state" =>'required',
+            "type" =>'required',
+            "zipcode" =>'required',
         ]);
 
-        $house = House::create($validData);
-
-        $hasImage = request()->validate([
-            'image' => 'nullable'
-        ]);
-
-        if(!is_null($hasImage['image']))
-        {
-            $house->image()->create([$hasImage]);
-        }
+        $house = auth()->user()->house()->create($validData);
 
         return ['success' => true, 'data' => $house];
     }
@@ -80,6 +84,9 @@ class HouseController extends Controller
     }
 
     public function uploadImages(House $house){
+
+
+        request()->validate(['file' => 'image']);
 
         $images = Collection::wrap(request()->file('file'));
 
