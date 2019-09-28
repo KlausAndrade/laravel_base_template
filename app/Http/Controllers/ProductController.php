@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Image;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Config;
@@ -13,7 +14,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index');
+        $this->middleware('admin')->except(['index', 'show']);
     }
     /**
      * Display a listing of the resource.
@@ -60,7 +61,6 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
      * @param Product $product
      * @return void
      */
@@ -107,14 +107,13 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
      * @param Product $product
      * @return array
      */
-    public function updateActive(Request $request, Product $product)
+    public function updateActive(Product $product)
     {
 
-        $product = Product::where('id', $request->id)->update(['active' => $request->active]);
+        $product = Product::where('id', request('id'))->update(['active' => request('active')]);
 
         return ['success' => true, 'data' => $product];
     }
@@ -124,7 +123,7 @@ class ProductController extends Controller
      *
      * @param Product $product
      * @return array
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy(Product $product)
     {

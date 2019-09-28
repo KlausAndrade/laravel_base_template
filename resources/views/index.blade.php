@@ -3,7 +3,6 @@ $config = [
     'appName' => config('app.name'),
     'locale' => $locale = app()->getLocale(),
     'locales' => config('app.locales'),
-    'githubAuth' => config('services.github.client_id'),
 ];
 @endphp
 <!DOCTYPE html>
@@ -13,6 +12,7 @@ $config = [
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>{{ config('app.name') }}</title>
+  <script src="https://js.stripe.com/v3/"></script>
 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 </head>

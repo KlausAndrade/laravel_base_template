@@ -8,23 +8,13 @@
               <input v-model="product.active" type="checkbox" @click="updateActive(product)">
             </div>
             <div class="flex">
-
               <div class="w-1/2 p-2">
                 <vue-carousel v-if="images.length > 0" :data="images" />
                 <div v-else class="bg-cover bg-center h-56 p-4" style="background-image: url(https://via.placeholder.com/450x450)" />
               </div>
 
               <div class="w-1/2 p-2">
-                <input id="card-holder-name" type="text">
-
-                <!-- Stripe Elements Placeholder -->
-                <div id="card-element"></div>
-
-                <button id="card-button">
-                  Process Payment
-                </button>
-
-
+                <stripe />
               </div>
             </div>
           </div>
@@ -62,11 +52,12 @@
 import TwButton from '../../components/TwButton'
 import axios from 'axios'
 import VueCarousel from '@chenfengyuan/vue-carousel'
+import Stripe from '../../components/Stripe'
 
 export default {
   name: 'Show',
 
-  components: { TwButton, VueCarousel },
+  components: { Stripe, TwButton, VueCarousel },
   filters: {
     currency (value) {
       return value.toFixed(2)
@@ -114,7 +105,6 @@ export default {
     }
   }
 }
-
 
 </script>
 
