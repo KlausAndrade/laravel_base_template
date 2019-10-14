@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Stripe.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/privacy.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/terms.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/show.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/RecommendForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/RecommendForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +158,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/pages/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -170,16 +172,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\jbi\resources\js\pages" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages\products" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\pages" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\pages\products" />
-      <recent name="C:\Users\klaus\code\base-template\resources\js\pages\settings" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -226,7 +228,9 @@
       <workItem from="1569256063063" duration="937000" />
       <workItem from="1569347918985" duration="5583000" />
       <workItem from="1569668011988" duration="575000" />
-      <workItem from="1569668634773" duration="5453000" />
+      <workItem from="1569668634773" duration="6164000" />
+      <workItem from="1570031223067" duration="1835000" />
+      <workItem from="1571076159648" duration="3807000" />
     </task>
     <servers />
   </component>

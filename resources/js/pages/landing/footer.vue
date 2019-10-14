@@ -5,10 +5,9 @@
       <div class="container mx-auto  px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
           <div class="flex-1 mb-6">
-            <a class="text-teal-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-              <!--Icon from: http://www.potlabicons.com/ -->
-              Just book It
-            </a>
+              <router-link class="text-teal-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" :to="{ name: 'home' }">
+                  Just book It
+              </router-link>
           </div>
 
           <div class="flex-1">
@@ -23,10 +22,14 @@
             </p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Terms</a>
+                <router-link class="no-underline text-gray-800 hover:text-teal-500" :to="{ name: 'terms' }">
+                  Terms
+                </router-link>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Privacy</a>
+                <router-link class="no-underline text-gray-800 hover:text-teal-500" :to="{ name: 'privacy' }">
+                  Privacy
+                </router-link>
               </li>
             </ul>
           </div>
@@ -36,10 +39,10 @@
             </p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Facebook</a>
+                <a href="https://www.facebook.com/Just-Book-It-116935079707977/" target="_blank" class="no-underline text-gray-800 hover:text-teal-500">Facebook</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline text-gray-800 hover:text-teal-500">Instagram</a>
+                <a href="https://instagram.com/justbookit15?igshid=1uyj0lvra5217" target="_blank" class="no-underline text-gray-800 hover:text-teal-500">Instagram</a>
               </li>
             </ul>
           </div>
@@ -52,6 +55,6 @@
 <script>
 import Links from '../../components/Links'
 export default {
-  components: { Links }
+    components: { Links }
 }
 </script>

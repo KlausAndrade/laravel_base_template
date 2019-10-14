@@ -6,7 +6,7 @@
           {{ $t('pricing') }}
         </h1>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
 
         <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
@@ -17,19 +17,13 @@
               </div>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">
-                  Análise de mercado (preços, taxas de ocupação, etc.)
+                  {{ $t('price_basic_1') }}
                 </li>
                 <li class="border-b py-4">
-                  Presença nos principais sites de reservas Internacionais.
+                  {{ $t('price_basic_2') }}
                 </li>
                 <li class="border-b py-4">
-                  Divulgação nas redes sociais e SEO.
-                </li>
-                <li class="border-b py-4">
-                  Construção dos anúncios nas principais plataformas internacionais.
-                </li>
-                <li class="border-b py-4">
-                  Divulgação nas redes sociais e SEO.
+                  {{ $t('price_basic_3') }}
                 </li>
               </ul>
             </div>
@@ -53,13 +47,16 @@
               <div class="h-1 w-full gradient my-0 py-0 rounded-t" />
               <ul class="w-full text-center text-base font-bold">
                 <li class="border-b py-4">
-                  Something
+                  {{ $t('price_regular_1') }}
                 </li>
                 <li class="border-b py-4">
-                  That thing
+                  {{ $t('price_regular_2') }}
                 </li>
                 <li class="border-b py-4">
-                  Another thing
+                  {{ $t('price_regular_3') }}
+                </li>
+                <li class="border-b py-4">
+                  {{ $t('price_regular_4') }}
                 </li>
               </ul>
             </div>
@@ -82,13 +79,16 @@
               </div>
               <ul class="w-full text-center text-sm">
                 <li class="border-b py-4">
-                  Everything
+                  {{ $t('price_premium_1') }}
                 </li>
                 <li class="border-b py-4">
-                  That thing
+                  {{ $t('price_premium_2') }}
                 </li>
                 <li class="border-b py-4">
-                  Another thing
+                  {{ $t('price_premium_3') }}
+                </li>
+                <li class="border-b py-4">
+                  {{ $t('price_premium_4') }}
                 </li>
               </ul>
             </div>

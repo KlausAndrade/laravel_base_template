@@ -24,19 +24,19 @@
 import ContactForm from './ContactForm'
 import RecommendForm from './RecommendForm'
 export default {
-  name: 'Links',
-  // eslint-disable-next-line vue/no-unused-components
-  components: { RecommendForm, ContactForm },
-  props: {
-    colors: { default: 'text-white font-bold', type: String },
-    color: { default: 'hover:text-teal-200', type: String }
-  },
-  data () {
-    return {
-      showRecommend: false,
-      showContact: false
+    name: 'Links',
+    // eslint-disable-next-line vue/no-unused-components
+    components: { RecommendForm, ContactForm },
+    props: {
+        colors: { default: 'text-white font-bold', type: String },
+        color: { default: 'hover:text-teal-200', type: String }
+    },
+    data () {
+        return {
+            showRecommend: false,
+            showContact: false
+        }
     }
-  }
 }
 </script>
 
