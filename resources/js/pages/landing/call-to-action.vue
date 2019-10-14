@@ -30,9 +30,9 @@
         {{ $t('action_subheading') }}
       </h3>
 
-      <button @click="showRegister = true" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-        {{ $t('register') }}
-      </button>
+      <router-link :to="{ name: 'register' }" class="mx-auto lg:mx-0 bg-white mt-4 text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+        Register
+      </router-link>
 
       <modal :show.sync="showRegister">
         <TwButton> {{ $t('send_email') }} </TwButton>
@@ -44,10 +44,10 @@
 <script>
 
 export default {
-  data () {
-    return {
-      showRegister: false
+    data () {
+        return {
+            showRegister: false
+        }
     }
-  }
 }
 </script>
