@@ -180,122 +180,124 @@ import TwButton from '../../components/TwButton'
 import Loader from '../../components/Loader'
 
 export default {
-  name: 'HouseForm',
-  components: { Loader, TwButton, VueEditor },
-  props: ['houseId', 'type'],
-  data: () => ({
-    remember: false,
-    isLoading: false,
-    dropzone: null,
-    form: new Form({
-      name: '',
-      country: '',
-      address: '',
-      number: '',
-      city: '',
-      state: '',
-      zipcode: '',
-      type: '',
-      space: '',
-      dedicated: false,
-      price: '',
-      checkin: '',
-      checkout: '',
-      guests: '',
-      rooms: '',
-      description: '',
-      active: ''
-    })
+    name: 'HouseForm',
+    components: { Loader, TwButton, VueEditor },
+    props: ['houseId', 'type'],
+    data: () => ({
+        remember: false,
+        isLoading: false,
+        dropzone: null,
+        form: new Form({
+            name: '',
+            country: '',
+            address: '',
+            number: '',
+            city: '',
+            state: '',
+            zipcode: '',
+            type: '',
+            space: '',
+            dedicated: false,
+            price: '',
+            checkin: '',
+            checkout: '',
+            guests: '',
+            rooms: '',
+            description: '',
+            active: ''
+        })
 
-  }),
-  mounted () {
-    this.dropzone = new Dropzone(this.$refs.imageUpload, {
-      url: `/api/houses/${this.houseId}/images`,
-      acceptedFiles: 'image/*',
-      autoProcessQueue: this.type === 'edit'
-    })
-    if (this.type === 'edit') this.getHouse()
-  },
-  methods: {
-    handleHouse () {
-      this.isLoading = true
-
-      if (this.type === 'create') this.createHouse()
-      else this.updateHouse()
-
-      this.isLoading = false
+    }),
+    mounted () {
+        this.dropzone = new Dropzone(this.$refs.imageUpload, {
+            url: `/api/houses/${this.houseId}/images`,
+            acceptedFiles: 'image/*',
+            autoProcessQueue: this.type === 'edit'
+        })
+        if (this.type === 'edit') this.getHouse()
     },
+    methods: {
+        handleHouse () {
+            this.isLoading = true
 
-    async getHouse () {
-      try {
-        const { data } = await axios.get(`/api/houses/${this.houseId}`)
+            if (this.type === 'create') this.createHouse()
+            else this.updateHouse()
 
-        this.form.name = data.data.name
-        this.form.price = data.data.price
-        this.form.description = data.data.description
-        this.form.image = data.data.image
+            this.isLoading = false
+        },
 
-        this.isLoading = false
-      } catch (error) {
-        this.error = this.$t('house_not_found')
-        this.isLoading = false
-      }
-    },
+        async getHouse () {
+            try {
+                const { data } = await axios.get(`/api/houses/${this.houseId}`)
 
-    async deleteHouse () {
-      try {
-        if (confirm(this.$t('are_you_sure'))) {
-          const { data } = await axios.delete(`/api/houses/destroy/${this.houseId}`)
+                let obj = data.data
 
-          if (data.success) {
-            this.$toasted.success(this.$t('house_deleted'))
+                for (let key in obj) {
+                    if (this.form.hasOwnProperty(key)) {
+                        this.form[key] = obj[key]
+                    }
+                }
+
+                this.isLoading = false
+            } catch (error) {
+                this.error = this.$t('house_not_found')
+                this.isLoading = false
+            }
+        },
+
+        async deleteHouse () {
+            try {
+                if (confirm(this.$t('are_you_sure'))) {
+                    const { data } = await axios.delete(`/api/houses/destroy/${this.houseId}`)
+
+                    if (data.success) {
+                        this.$toasted.success(this.$t('house_deleted'))
+                        this.$router.push({ name: 'houses.houses' })
+                    } else {
+                        this.$toasted.error(this.$t('something_went_wrong'))
+                    }
+
+                    this.isLoading = false
+                }
+            } catch (error) {
+                this.error = this.$t('house_not_found')
+                this.isLoading = false
+            }
+        },
+        async createHouse () {
+            const { data } = await this.form.post('/api/houses/store')
+
+            if (data.success) {
+                this.dropzone.options.url = `/api/houses/${data.data.id}/images`
+                this.dropzone.processQueue()
+                this.$toasted.success(this.$t('house_registered'))
+            } else {
+                this.$toasted.error(this.$t('something_went_wrong'))
+            }
             this.$router.push({ name: 'houses.houses' })
-          } else {
-            this.$toasted.error(this.$t('something_went_wrong'))
-          }
+        },
+        async updateHouse () {
+            const { data } = await this.form.patch(`/api/houses/update/${this.houseId}`)
 
-          this.isLoading = false
+            if (data.success) {
+                this.$toasted.success(this.$t('house_updated'))
+                this.$router.push({ name: 'houses.houses' })
+            } else {
+                this.$toasted.error(this.$t('something_went_wrong'))
+            }
+        },
+        async removeImage (image) {
+            const { data } = await this.form.delete(`/api/houses/${this.houseId}/image/${image.id}`)
+
+            if (data.success) {
+                this.$toasted.success(this.$t('image_removed'))
+                this.getHouse()
+            } else {
+                this.$toasted.error(this.$t('something_went_wrong'))
+            }
         }
-        return
-      } catch (error) {
-        this.error = this.$t('house_not_found')
-        this.isLoading = false
-      }
-    },
-    async createHouse () {
-      const { data } = await this.form.post('/api/houses/store')
 
-      if (data.success) {
-        this.dropzone.options.url = `/api/houses/${data.data.id}/images`
-        this.dropzone.processQueue()
-        this.$toasted.success(this.$t('house_registered'))
-      } else {
-        this.$toasted.error(this.$t('something_went_wrong'))
-      }
-      this.$router.push({ name: 'houses.houses' })
-    },
-    async updateHouse () {
-      const { data } = await this.form.patch(`/api/houses/update/${this.houseId}`)
-
-      if (data.success) {
-        this.$toasted.success(this.$t('house_updated'))
-        this.$router.push({ name: 'houses.houses' })
-      } else {
-        this.$toasted.error(this.$t('something_went_wrong'))
-      }
-    },
-    async removeImage (image) {
-      const { data } = await this.form.delete(`/api/houses/${this.houseId}/image/${image.id}`)
-
-      if (data.success) {
-        this.$toasted.success(this.$t('image_removed'))
-        this.getHouse()
-      } else {
-        this.$toasted.error(this.$t('something_went_wrong'))
-      }
     }
-
-  }
 }
 </script>
 
