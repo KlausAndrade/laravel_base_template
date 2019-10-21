@@ -62,109 +62,112 @@ import TwButton from '../../components/TwButton'
 import Loader from '../../components/Loader'
 
 export default {
-  name: 'ProductForm',
-  components: { Loader, TwButton, VueEditor },
-  props: ['productId', 'type'],
-  data: () => ({
-    remember: false,
-    isLoading: false,
-    dropzone: null,
-    form: new Form({
-      name: '',
-      price: '',
-      description: '',
-      image: ''
-    })
+    name: 'ProductForm',
+    components: { Loader, TwButton, VueEditor },
+    props: ['productId', 'type'],
+    data: () => ({
+        remember: false,
+        isLoading: false,
+        dropzone: null,
+        form: new Form({
+            name: '',
+            price: '',
+            description: '',
+            image: ''
+        })
 
-  }),
-  mounted () {
-    this.dropzone = new Dropzone(this.$refs.imageUpload, {
-      url: `/api/products/${this.productId}/images`,
-      acceptedFiles: 'image/*',
-      autoProcessQueue: this.type === 'edit'
-    })
-    if (this.type === 'edit') this.getProduct()
-  },
-  methods: {
-    handleProduct () {
-      this.isLoading = true
-
-      if (this.type === 'create') this.createProduct()
-      else this.updateProduct()
-
-      this.isLoading = false
+    }),
+    mounted () {
+        this.dropzone = new Dropzone(this.$refs.imageUpload, {
+            url: `/api/products/${this.productId}/images`,
+            acceptedFiles: 'image/*',
+            autoProcessQueue: this.type === 'edit'
+        })
+        if (this.type === 'edit') this.getProduct()
     },
+    methods: {
+        handleProduct () {
+            this.isLoading = true
 
-    async getProduct () {
-      try {
-        const { data } = await axios.get(`/api/products/${this.productId}`)
+            if (this.type === 'create') this.createProduct()
+            else this.updateProduct()
 
-        this.form.name = data.data.name
-        this.form.price = data.data.price
-        this.form.description = data.data.description
-        this.form.image = data.data.image
+            this.isLoading = false
+        },
 
-        this.isLoading = false
-      } catch (error) {
-        this.error = this.$t('product_not_found')
-        this.isLoading = false
-      }
-    },
+        async getProduct () {
+            try {
+                const { data } = await axios.get(`/api/products/${this.productId}`)
 
-    async deleteProduct () {
-      try {
-        if (confirm(this.$t('are_you_sure'))) {
-          const { data } = await axios.delete(`/api/products/destroy/${this.productId}`)
+                let obj = data.data
 
-          if (data.success) {
-            this.$toasted.success(this.$t('product_deleted'))
+                for (let key in obj) {
+                    if (this.form.hasOwnProperty(key)) {
+                        this.form[key] = obj[key]
+                    }
+                }
+
+                this.isLoading = false
+            } catch (error) {
+                this.error = this.$t('product_not_found')
+                this.isLoading = false
+            }
+        },
+
+        async deleteProduct () {
+            try {
+                if (confirm(this.$t('are_you_sure'))) {
+                    const { data } = await axios.delete(`/api/products/destroy/${this.productId}`)
+
+                    if (data.success) {
+                        this.$toasted.success(this.$t('product_deleted'))
+                        this.$router.push({ name: 'products.products' })
+                    } else {
+                        this.$toasted.error(this.$t('something_went_wrong'))
+                    }
+
+                    this.isLoading = false
+                }
+            } catch (error) {
+                this.error = this.$t('product_not_found')
+                this.isLoading = false
+            }
+        },
+        async createProduct () {
+            const { data } = await this.form.post('/api/products/store')
+
+            if (data.success) {
+                this.dropzone.options.url = `/api/products/${data.data.id}/images`
+                this.dropzone.processQueue()
+
+                this.$toasted.success(this.$t('product_registered'))
+            } else {
+                this.$toasted.error(this.$t('something_went_wrong'))
+            }
             this.$router.push({ name: 'products.products' })
-          } else {
-            this.$toasted.error(this.$t('something_went_wrong'))
-          }
+        },
+        async updateProduct () {
+            const { data } = await this.form.patch(`/api/products/update/${this.productId}`)
 
-          this.isLoading = false
+            if (data.success) {
+                this.$toasted.success(this.$t('product_updated'))
+                this.$router.push({ name: 'products.products' })
+            } else {
+                this.$toasted.error(this.$t('something_went_wrong'))
+            }
+        },
+        async removeImage (image) {
+            const { data } = await this.form.delete(`/api/products/${this.productId}/image/${image.id}`)
+
+            if (data.success) {
+                this.$toasted.success(this.$t('image_removed'))
+                this.getProduct()
+            } else {
+                this.$toasted.error(this.$t('something_went_wrong'))
+            }
         }
-      } catch (error) {
-        this.error = this.$t('product_not_found')
-        this.isLoading = false
-      }
-    },
-    async createProduct () {
-      const { data } = await this.form.post('/api/products/store')
 
-      if (data.success) {
-        this.dropzone.options.url = `/api/products/${data.data.id}/images`
-        this.dropzone.processQueue()
-
-        this.$toasted.success(this.$t('product_registered'))
-      } else {
-        this.$toasted.error(this.$t('something_went_wrong'))
-      }
-      this.$router.push({ name: 'products.products' })
-    },
-    async updateProduct () {
-      const { data } = await this.form.patch(`/api/products/update/${this.productId}`)
-
-      if (data.success) {
-        this.$toasted.success(this.$t('product_updated'))
-        this.$router.push({ name: 'products.products' })
-      } else {
-        this.$toasted.error(this.$t('something_went_wrong'))
-      }
-    },
-    async removeImage (image) {
-      const { data } = await this.form.delete(`/api/products/${this.productId}/image/${image.id}`)
-
-      if (data.success) {
-        this.$toasted.success(this.$t('image_removed'))
-        this.getProduct()
-      } else {
-        this.$toasted.error(this.$t('something_went_wrong'))
-      }
     }
-
-  }
 }
 </script>
 
