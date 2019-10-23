@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/PasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/OAuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/OAuthTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/SettingsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/SettingsTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -159,16 +165,16 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\jbi" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\components" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages\products" />
       <recent name="C:\Users\klaus\code\base-template\resources\js\pages" />
-      <recent name="C:\Users\klaus\code\base-template\resources\js\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,7 +227,7 @@
       <workItem from="1571243973505" duration="2483000" />
       <workItem from="1571246470914" duration="6460000" />
       <workItem from="1571681002938" duration="3431000" />
-      <workItem from="1571853060093" duration="3598000" />
+      <workItem from="1571853060093" duration="7804000" />
     </task>
     <servers />
   </component>
