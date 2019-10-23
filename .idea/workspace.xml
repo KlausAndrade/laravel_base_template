@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Success.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.circleci/fileconfig.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/services.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/privacy.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/privacy.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/product-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/product-form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/terms.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/terms.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +221,8 @@
       <workItem from="1571076159648" duration="4092000" />
       <workItem from="1571243973505" duration="2483000" />
       <workItem from="1571246470914" duration="6460000" />
-      <workItem from="1571681002938" duration="2388000" />
+      <workItem from="1571681002938" duration="3431000" />
+      <workItem from="1571853060093" duration="1131000" />
     </task>
     <servers />
   </component>
