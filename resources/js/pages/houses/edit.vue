@@ -18,8 +18,8 @@
 <script>
 import HouseForm from './house-form'
 export default {
-  name: 'Edit',
-  components: { HouseForm },
+    name: 'Edit',
+    components: { HouseForm }
 
 }
 </script>

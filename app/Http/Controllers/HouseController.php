@@ -77,7 +77,7 @@ class HouseController extends Controller
     public function update(House $house)
     {
 
-        $house->update(request()->except('image'));
+        $house->update(request()->except(['image', 'active']));
 
         return response()->json(['success'=> true], 200);
 
