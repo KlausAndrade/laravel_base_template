@@ -46,6 +46,7 @@ export default [
         children: [
             { path: '', redirect: { name: 'houses.houses' } },
             { path: '', name: 'houses.houses', component: page('houses/houses.vue') },
+            { path: ':id', name: 'houses.show', component: page('houses/show.vue') },
             { path: 'create',
                 name: 'houses.create',
                 component: page('houses/create.vue'),

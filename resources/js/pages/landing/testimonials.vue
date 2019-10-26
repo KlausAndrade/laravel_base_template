@@ -8,49 +8,69 @@
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t" />
         </div>
-
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-gray-100 rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="text-gray-800 italic text-base px-6 pt-4 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
-          </div>
-          <div class="flex">
-            <p class="mt-2"><b>Andrade</b>, Klaus</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-gray-100 rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="text-gray-800 italic text-base px-6 pt-4 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
-          </div>
-          <div class="flex">
-            <p class="mt-2"><b>Doe</b>, John</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-gray-100 rounded-t rounded-b-none overflow-hidden shadow">
-            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="text-gray-800 italic text-base px-6 pt-4 mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-              </p>
-            </a>
-          </div>
-          <div class="flex">
-            <p class="mt-2"><b>Doe</b>, Jane</p>
-          </div>
+        <div class="w-full">
+          <h3 class="font-bold text-gray-600 text-lg mt-8">
+            {{ $t('testimonials_guests') }}
+          </h3>
         </div>
 
+        <testimonial>
+          {{ $t('testimonials_guest_1') }}
+          <template slot="author">
+            <b>Andrade</b>, Klaus
+          </template>
+        </testimonial>
+
+        <testimonial>
+          {{ $t('testimonials_guest_2') }}
+          <template slot="author">
+            <b>Andrade</b>, Klaus
+          </template>
+        </testimonial>
+
+        <testimonial>
+          {{ $t('testimonials_guest_3') }}
+          <template slot="author">
+            <b>Doe</b>, John
+          </template>
+        </testimonial>
+
+        <hr>
+
+        <div class="w-full">
+          <h3 class="font-bold text-gray-600 text-lg mt-8">
+            {{ $t('testimonials_hosts') }}
+          </h3>
+        </div>
+
+        <testimonial>
+          {{ $t('testimonials_host_1') }}
+          <template slot="author">
+            <b>Andrade</b>, Klaus
+          </template>
+        </testimonial>
+
+        <testimonial>
+          {{ $t('testimonials_host_2') }}
+          <template slot="author">
+            <b>Andrade</b>, Klaus
+          </template>
+        </testimonial>
+
+        <testimonial>
+          {{ $t('testimonials_host_3') }}
+          <template slot="author">
+            <b>Doe</b>, John
+          </template>
+        </testimonial>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-export default {}
+import Testimonial from '../../components/Testimonial'
+export default {
+    components: { Testimonial }
+}
 </script>

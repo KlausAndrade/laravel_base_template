@@ -85,6 +85,16 @@
     "testimonials_heading": "Quem confiou está satifeito!",
     "testimonials": "Recomendações",
 
+    "testimonials_guests": "Recomendações de hóspedes",
+    "testimonials_guest_1": "Apartamento gerido profissionalmente, bem decorado e extremamente limpo!",
+    "testimonials_guest_2": "Gostei muito do apartamento, achei muito limpo, confortável e de tamanho perfeito para 5 a 10 pessoas. Os quartos e a sala eram perfeitos. A localização foi incrível, perto de tudo. Definitivamente recomendo.",
+    "testimonials_guest_3": "Anfitriões perfeitos, apartamento perfeito, limpeza perfeita, tudo perfeito! 110% recomendado",
+
+    "testimonials_hosts": "Recomendações de anfitriões",
+    "testimonials_host_1": "Equipe mais profissional com quem já trabalhei.",
+    "testimonials_host_2": "Super eficaz! Apartamentos sempre em perfeito estado e ocupação acima de 90% todos os meses!",
+    "testimonials_host_3": "Melhor decisão de sempre! Além de ganhar mais dinheiro com o Just Book It, é muito fácil quando eu quero usar minha casa e parar de alugar por um tempo",
+
     "boats_heading": "Residencias no mar?",
     "boats_title": "Também exploramos barcos e yachts",
     "boats_subheading": "Entre em contato para mais informações",
@@ -116,6 +126,9 @@
     "who_we_are": "Quem somos",
     "recommendations": "Recomendações",
     "recommend_a_host": "Recomende um anfitrião",
+    "house_registered": "Casa registrada com sucesso!",
+    "buy": "comprar",
+    "no_description": "Sem descrição",
 
     "products": "Produtos",
     "products_create": "Cadastrar produto",
@@ -125,6 +138,6 @@
     "edit": "Editar",
     "image": "Imagem",
     "read_more": "Ler mais",
-    "product_registered": "Produto registrador com sucesso!",
+    "product_registered": "Produto registrado com sucesso!",
     "something_went_wrong": "Algo deu errado!"
 }
