@@ -12,7 +12,7 @@ class HouseController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except('index');
+        $this->middleware('admin')->except('index','show');
     }
     /**
      * Display a listing of the resource.

@@ -1,5 +1,5 @@
 <template>
-  <div id="house" v-if="$store.getters['auth/role'] || house.active" :class="size" class="mx-auto" style="min-width: 300px;">
+  <div v-if="$store.getters['auth/role'] || house.active" id="house" :class="size" class="mx-auto" style="min-width: 300px;">
     <div class="flex items-center justify-center">
       <div class="w-full sm:w-full lg:w-full py-6 px-3">
         <div class="bg-white shadow-xl rounded-lg overflow-hidden">
@@ -21,7 +21,7 @@
           </div>
           <div class="p-4 border-t border-gray-300 text-gray-700">
             <div class="text-gray-700" v-html="description">
-              No description
+              {{ $t('no_description') }}
             </div>
             <p v-if="hasViewMore" class="cursor-pointer text-blue-500 mt-2" @click="viewMore = !viewMore">
               {{ $t('read_more') }}
@@ -29,7 +29,9 @@
           </div>
           <div class="px-4 pt-3 pb-4 border-t border-gray-300 bg-gray-100">
             <div class="flex items-center justify-center pt-2">
-              <TwButton>Comprar</TwButton>
+              <router-link :to="{name: 'houses.show', params: { id: house.id }}">
+                <TwButton>{{ $t('buy') }}</TwButton>
+              </router-link>
               <router-link v-if="$store.getters['auth/role']" class="font-bold ml-4" :to="{name: 'houses.edit', params: { id: house.id }}">
                 {{ $t('edit') }}
               </router-link>
@@ -47,47 +49,51 @@ import axios from 'axios'
 import VueCarousel from '@chenfengyuan/vue-carousel'
 
 export default {
-  name: 'House',
-  components: { TwButton, VueCarousel },
-  filters: {
-    currency (value) {
-      return value.toFixed(2)
-    }
-  },
-  props: {
-    house: { required: true },
-    size: { default: 'max-w-6xl w-1/3' }
-  },
-  data () {
-    return {
-      viewMore: false,
-      images: this.house.image.map((image) => `<img src="${image.url}" />`)
-    }
-  },
-  computed: {
-    description () {
-      if (this.house.description.length > 80 && !this.viewMore) {
-        return this.house.description.substring(0, 80) + '...'
-      }
-
-      return this.house.description
+    name: 'House',
+    components: { TwButton, VueCarousel },
+    filters: {
+        currency (value) {
+            return value.toFixed(2)
+        }
     },
-    hasViewMore () {
-      return this.house.description.length > 80
-    }
-  },
-  methods: {
+    props: {
+        house: { required: true },
+        size: { default: 'max-w-6xl w-1/3' }
+    },
+    data () {
+        return {
+            viewMore: false
+        }
+    },
+    computed: {
+        images () {
+            if (!this.house.image) return []
+            return this.house.image.map((image) => `<img src="${image.url}" />`)
+        },
 
-    async updateActive (house) {
-      let reqObject = { id: house.id, active: !house.active }
-      try {
-        await axios.patch('/api/houses/updateActive', reqObject)
-      } catch (error) {
-        this.error = this.$t('house_not_found')
-      }
-    }
+        description () {
+            if (this.house.description.length > 80 && !this.viewMore) {
+                return this.house.description.substring(0, 80) + '...'
+            }
 
-  }
+            return this.house.description
+        },
+        hasViewMore () {
+            return this.house.description.length > 80
+        }
+    },
+    methods: {
+
+        async updateActive (house) {
+            let reqObject = { id: house.id, active: !house.active }
+            try {
+                await axios.patch('/api/houses/updateActive', reqObject)
+            } catch (error) {
+                this.error = this.$t('house_not_found')
+            }
+        }
+
+    }
 }
 </script>
 

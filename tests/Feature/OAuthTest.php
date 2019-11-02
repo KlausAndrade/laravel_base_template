@@ -53,7 +53,7 @@ class OAuthTest extends TestCase
         $this->withoutExceptionHandling();
 
         $this->get('/api/oauth/github/callback')
-            ->assertText('token')
+            ->assertSeeText('token')
             ->assertSuccessful();
 
         $this->assertDatabaseHas('users', [

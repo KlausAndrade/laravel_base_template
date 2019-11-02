@@ -1,21 +1,47 @@
 <template>
-  <div ref="card" />
+  <div>
+    <input ref="cardHolderName" type="text">
+
+    <!-- Stripe Elements Placeholder -->
+    <div ref="cardElement" />
+
+    <button ref="cardButton">
+      Process Payment
+    </button>
+  </div>
 </template>
 
 <script>
 
 let stripe = Stripe(process.env.MIX_STRIPE)
 let elements = stripe.elements()
-let card = undefined
+let cardElement
 
 export default {
     mounted: function () {
-        card = elements.create('card')
-        card.mount(this.$refs.card)
+        cardElement = elements.create('card')
+        cardElement.mount(this.$refs.cardElement)
+
+        const cardHolderName = this.$refs.cardHolderName
+        const cardButton = this.$refs.cardButton
+
+        cardButton.addEventListener('click', async (e) => {
+            const { paymentMethod, error } = await stripe.createPaymentMethod(
+                'card', cardElement, {
+                    billing_details: { name: cardHolderName.value }
+                }
+            )
+
+            if (error) {
+                // Display "error.message" to the user...
+            } else {
+                // The card has been verified successfully...
+            }
+        })
     },
 
     purchase: function () {
-        stripe.createToken(card).then(function (result) {
+        stripe.createToken(cardElement).then(function (result) {
             // Access the token with result.token
         })
     }

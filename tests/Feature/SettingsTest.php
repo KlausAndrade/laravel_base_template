@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class SettingsTest extends TestCase
 {
-    /** @var \App\User */
+    /** @var User */
     protected $user;
 
     public function setUp(): void
@@ -41,9 +41,10 @@ class SettingsTest extends TestCase
     {
         $this->actingAs($this->user)
             ->patchJson('/api/settings/password', [
+                'old_password' => 'password',
                 'password' => 'updated',
                 'password_confirmation' => 'updated',
-            ])
+            ])->dump()
             ->assertSuccessful();
 
         $this->assertTrue(Hash::check('updated', $this->user->password));
