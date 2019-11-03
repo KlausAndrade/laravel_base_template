@@ -30,27 +30,27 @@
 import Form from 'vform'
 
 export default {
-  middleware: 'guest',
+    middleware: 'guest',
 
-  metaInfo () {
-    return { title: this.$t('reset_password') }
-  },
+    metaInfo () {
+        return { title: this.$t('reset_password') }
+    },
 
-  data: () => ({
-    status: '',
-    form: new Form({
-      email: ''
-    })
-  }),
+    data: () => ({
+        status: '',
+        form: new Form({
+            email: ''
+        })
+    }),
 
-  methods: {
-    async send () {
-      const { data } = await this.form.post('/api/password/email')
+    methods: {
+        async send () {
+            const { data } = await this.form.post('/api/password/email')
 
-      this.status = data.status
+            this.status = data.status
 
-      this.form.reset()
+            this.form.reset()
+        }
     }
-  }
 }
 </script>

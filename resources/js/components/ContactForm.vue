@@ -4,27 +4,34 @@
   </div>
   <div v-else-if="sent" class="text-center">
     <success />
-      {{ $t('message_sent')}}
+    {{ $t('message_sent') }}
   </div>
   <form v-else class="w-full max-w-lg" @submit.prevent="send">
     <h1 class="text-3xl mb-6">
-      Contacte-nos
+      {{ $t('contact') }}
     </h1>
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-name">
-          {{ $t('fullname') }}
-        </label>
-        <input id="grid-name" v-model="form.name" required class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="Jane">
-        <p class="text-red-500 text-xs italic">
-          {{ $t('fill_out_field') }}
-        </p>
+          <div class="field">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-name">
+              {{ $t('fullname') }}
+            </label>
+            <input id="grid-name"
+                   v-model="form.name"
+                   required class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                   type="text"
+                   :placeholder="$t('fullname')">
+          </div>
       </div>
       <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
           {{ $t('email') }}
         </label>
-        <input id="grid-email" v-model="form.email" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="email" placeholder="Doe">
+        <input id="grid-email"
+               v-model="form.email"
+               class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+               type="email"
+               placeholder="email@example.com">
       </div>
     </div>
     <div class="flex flex-wrap -mx-3 mb-6">
@@ -32,7 +39,11 @@
         <label for="grid-phone" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
           {{ $t('phone') }}
         </label>
-        <input id="grid-phone" v-model="form.phone" type="phone" placeholder="Jane" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+        <input id="grid-phone"
+               v-model="form.phone"
+               required type="phone"
+               placeholder="(+012) 345 678 910"
+               class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
       </div>
     </div>
     <div class="flex flex-wrap -mx-3 mb-6">
@@ -41,9 +52,10 @@
           {{ $t('message') }}
         </label>
         <textarea id="grid-message"
+                  required
                   v-model="form.message"
                   :placeholder="$t('leave_message')"
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
         />
       </div>
     </div>
@@ -61,11 +73,11 @@ import TwButton from './TwButton'
 import Form from 'vform'
 import axios from 'axios'
 import Loader from './Loader'
-import Success from "./Success";
+import Success from './Success'
 
 export default {
     name: 'ContactForm',
-    components: {Success, Loader, TwButton },
+    components: { Success, Loader, TwButton },
     data () {
         return {
             form: new Form({

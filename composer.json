@@ -34,14 +34,15 @@
     ],
     "require": {
         "php": "^7.3",
+        "ext-json": "*",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.4",
         "laravel/cashier": "^10.2",
         "laravel/dusk": "^5.1",
         "laravel/framework": "^5.8",
         "laravel/socialite": "^4.0",
         "laravel/tinker": "^1.0",
-        "tymon/jwt-auth": "^1.0.0-rc.4.2",
-      "ext-json": "*"
+        "tymon/jwt-auth": "^1.0.0-rc.4.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

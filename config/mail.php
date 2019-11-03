@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,10 +54,6 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
-    'to' => [
-        'address' => 'klaus1993@live.com',
-        'name' => 'Klaus Andrade'
-    ],
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
