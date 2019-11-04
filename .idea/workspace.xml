@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ContactForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/RecommendForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/RecommendForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Stripe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Stripe.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/show.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +230,8 @@
       <workItem from="1571866749185" duration="1556000" />
       <workItem from="1571903575384" duration="595000" />
       <workItem from="1572103268951" duration="6639000" />
-      <workItem from="1572811291216" duration="8316000" />
+      <workItem from="1572811291216" duration="8486000" />
+      <workItem from="1572888345448" duration="6566000" />
     </task>
     <servers />
   </component>

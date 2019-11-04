@@ -9,16 +9,14 @@
       </div>
 
       <div class="flex flex-wrap md:flex-no-wrap w-full">
-        <div class="sm:w-full md:w-5/12 my-4">
+        <div class="sm:w-full md:w-4/12 my-4">
           <vue-carousel v-if="product.images && product.images.length > 0" :data="Product.images" />
           <div v-else>
             No images added yet
           </div>
         </div>
-        <div class="sm:w-full md:w-5/12 my-4" v-html="product.description" />
-        <div class="sm:w-full md:w-2/12 my-4">
-          Confirm
-          Pagar agora | Deduzir de serviços
+        <div class="sm:w-full md:w-4/12 my-4" v-html="product.description" />
+        <div class="sm:w-full md:w-4/12 my-4">
           <stripe />
         </div>
       </div>
@@ -49,6 +47,16 @@ export default {
             try {
                 const { data } = await axios.get(`/api/products/${this.$route.params.id}`)
                 this.product = data.data
+                this.isLoading = false
+            } catch (error) {
+                this.error = this.$t('product_not_found')
+                this.isLoading = false
+            }
+        },
+
+        async payNow () {
+            try {
+                const { data } = await axios.post('/api/checkout/charge', { a: 'ler' })
                 this.isLoading = false
             } catch (error) {
                 this.error = this.$t('product_not_found')

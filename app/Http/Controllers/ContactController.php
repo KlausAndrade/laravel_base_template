@@ -21,9 +21,7 @@ class ContactController extends Controller
     }
     public function contact(){
         try {
-
-
-            Mail::to('klaus1993@live.com')->send(new Contact(request()->all()));
+            Mail::to(auth()->user())->send(new Contact(request()->all()));
 
             return response(['success' => true], 200);
 

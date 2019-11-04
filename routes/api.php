@@ -69,3 +69,11 @@ Route::prefix('mail')->group(function () {
     Route::post('contact', 'ContactController@contact');
     Route::post('recommendHost', 'ContactController@recommendHost');
 });
+
+// Checkout
+Route::prefix('checkout')->group(function () {
+    Route::get('intent-payment-method', 'CheckoutController@intentPaymentMethod');
+    Route::post('cart', 'CheckoutController@cart');
+    Route::post('charge', 'CheckoutController@charge');
+});
+

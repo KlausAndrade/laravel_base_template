@@ -1,7 +1,7 @@
 <template>
   <form class="w-full max-w-lg px-4">
       <h1 class="text-3xl mb-6">
-          {{ $t('hero_contact') }}
+          {{ $t('recommend_a_host') }}
       </h1>
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full px-3 mb-6 md:mb-0">
