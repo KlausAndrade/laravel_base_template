@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/amenity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/amenity.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,6 +168,7 @@
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages\products" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\jbi\public" />
       <recent name="C:\Users\klaus\code\jbi\public\dist\img\icons\amenities" />
       <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
       <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
@@ -229,7 +230,7 @@
       <workItem from="1572103268951" duration="6639000" />
       <workItem from="1572811291216" duration="8486000" />
       <workItem from="1572888345448" duration="11268000" />
-      <workItem from="1572976880446" duration="12603000" />
+      <workItem from="1572976880446" duration="13171000" />
     </task>
     <servers />
   </component>
