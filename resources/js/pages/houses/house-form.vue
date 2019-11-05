@@ -237,6 +237,7 @@ export default {
                         this.form[key] = obj[key]
                     }
                 }
+                this.form.image = obj.image;
 
                 this.isLoading = false
             } catch (error) {
