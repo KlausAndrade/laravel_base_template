@@ -2,146 +2,187 @@
   <div v-if="isLoading" class="flex justify-center">
     <loader />
   </div>
-  <form v-else class="px-4 max-w-2xl mx-auto" @submit.prevent="handleHouse" @keydown="form.onKeydown($event)">
+  <form v-else class="px-4 mx-auto flex flex-wrap" @submit.prevent="handleHouse" @keydown="form.onKeydown($event)">
     <!-- Name -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="name">{{ $t('name') }}</label>
-      <div class="col-md-7">
-        <input id="name" v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-input w-full" type="text" name="name" placeholder="House name" required>
-        <has-error :form="form" field="name" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="name">{{ $t('name') }}</label>
+        <div class="col-md-7">
+          <input id="name" v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-input w-full" type="text" name="name" placeholder="House name" required>
+          <has-error :form="form" field="name" />
+        </div>
       </div>
     </div>
     <!-- Address -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="address">{{ $t('address') }}</label>
-      <div class="col-md-7">
-        <input id="address" v-model="form.address" :class="{ 'is-invalid': form.errors.has('address') }" class="form-input w-full" type="text" name="address" placeholder="Address" required>
-        <has-error :form="form" field="address" />
-      </div>
-    </div>
-    <!-- Country -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="country">{{ $t('country') }}</label>
-      <div class="col-md-7">
-        <input id="country" v-model="form.country" :class="{ 'is-invalid': form.errors.has('country') }" class="form-input w-full" type="text" name="country" placeholder="Country" required>
-        <has-error :form="form" field="country" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="address">{{ $t('address') }}</label>
+        <div class="col-md-7">
+          <input id="address" v-model="form.address" :class="{ 'is-invalid': form.errors.has('address') }" class="form-input w-full" type="text" name="address" placeholder="Address">
+          <has-error :form="form" field="address" />
+        </div>
       </div>
     </div>
     <!-- Number -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="number">{{ $t('number') }}</label>
-      <div class="col-md-7">
-        <input id="number" v-model="form.number" :class="{ 'is-invalid': form.errors.has('number') }" class="form-input w-full" type="text" name="number" placeholder="Number" required>
-        <has-error :form="form" field="number" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="number">{{ $t('number') }}</label>
+        <div class="col-md-7">
+          <input id="number" v-model="form.number" :class="{ 'is-invalid': form.errors.has('number') }" class="form-input w-full" type="text" name="number" placeholder="Number">
+          <has-error :form="form" field="number" />
+        </div>
       </div>
     </div>
     <!-- City -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="city">{{ $t('city') }}</label>
-      <div class="col-md-7">
-        <input id="city" v-model="form.city" :class="{ 'is-invalid': form.errors.has('city') }" class="form-input w-full" type="text" name="city" placeholder="City" required>
-        <has-error :form="form" field="city" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="city">{{ $t('city') }}</label>
+        <div class="col-md-7">
+          <input id="city" v-model="form.city" :class="{ 'is-invalid': form.errors.has('city') }" class="form-input w-full" type="text" name="city" placeholder="City">
+          <has-error :form="form" field="city" />
+        </div>
       </div>
     </div>
     <!-- State -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="state">{{ $t('state') }}</label>
-      <div class="col-md-7">
-        <input id="state" v-model="form.state" :class="{ 'is-invalid': form.errors.has('state') }" class="form-input w-full" type="text" name="state" placeholder="State" required>
-        <has-error :form="form" field="state" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="state">{{ $t('state') }}</label>
+        <div class="col-md-7">
+          <input id="state" v-model="form.state" :class="{ 'is-invalid': form.errors.has('state') }" class="form-input w-full" type="text" name="state" placeholder="State">
+          <has-error :form="form" field="state" />
+        </div>
       </div>
     </div>
     <!-- ZIP -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="zipcode">{{ $t('zipcode') }}</label>
-      <div class="col-md-7">
-        <input id="zipcode" v-model="form.zipcode" :class="{ 'is-invalid': form.errors.has('zipcode') }" class="form-input w-full" type="text" name="zipcode" placeholder="ZIP" required>
-        <has-error :form="form" field="zipcode" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="zipcode">{{ $t('zipcode') }}</label>
+        <div class="col-md-7">
+          <input id="zipcode" v-model="form.zipcode" :class="{ 'is-invalid': form.errors.has('zipcode') }" class="form-input w-full" type="text" name="zipcode" placeholder="ZIP">
+          <has-error :form="form" field="zipcode" />
+        </div>
+      </div>
+    </div>
+    <!-- Country -->
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="country">{{ $t('country') }}</label>
+        <div class="col-md-7">
+          <input id="country" v-model="form.country" :class="{ 'is-invalid': form.errors.has('country') }" class="form-input w-full" type="text" name="country" placeholder="Country">
+          <has-error :form="form" field="country" />
+        </div>
       </div>
     </div>
     <!-- Type -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="type">{{ $t('type') }}</label>
-      <div class="col-md-7">
-        <select id="type" v-model="form.type" class="form-select w-full" required>
-          <option value="house">
-            House
-          </option>
-          <option value="apartment">
-            Apartment
-          </option>
-        </select>
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="type">{{ $t('type') }}</label>
+        <div class="col-md-7">
+          <select id="type" v-model="form.type" class="form-select w-full">
+            <option value="house">
+              House
+            </option>
+            <option value="apartment">
+              Apartment
+            </option>
+          </select>
+        </div>
       </div>
     </div>
     <!-- Space -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="space">{{ $t('space') }}</label>
-      <div class="col-md-7">
-        <select id="space" v-model="form.space" class="form-select w-full" required>
-          <option value="entire-place">
-            Entire place
-          </option>
-          <option value="private-room">
-            Private room
-          </option>
-          <option value="shared-room">
-            Shared room
-          </option>
-        </select>
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="space">{{ $t('space') }}</label>
+        <div class="col-md-7">
+          <select id="space" v-model="form.space" class="form-select w-full">
+            <option value="entire-place">
+              Entire place
+            </option>
+            <option value="private-room">
+              Private room
+            </option>
+            <option value="shared-room">
+              Shared room
+            </option>
+          </select>
+        </div>
       </div>
     </div>
     <!-- Dedicated -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="dedicated">{{ $t('dedicated') }}</label>
-      <div class="col-md-7">
-        <input id="dedicated" v-model="form.dedicated" class="form-checkbox" type="checkbox" name="dedicated">
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="dedicated">{{ $t('dedicated') }}</label>
+        <div class="col-md-7">
+          <input id="dedicated" v-model="form.dedicated" class="form-checkbox" type="checkbox" name="dedicated">
+        </div>
       </div>
     </div>
     <!-- Price -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="price">{{ $t('price') }}</label>
-      <div class="col-md-7">
-        <input id="price" v-model="form.price" :class="{ 'is-invalid': form.errors.has('price') }" class="form-input w-full" type="text" name="price" placeholder="Price" required>
-        <has-error :form="form" field="price" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="price">{{ $t('price') }}</label>
+        <div class="col-md-7">
+          <input id="price" v-model="form.price" :class="{ 'is-invalid': form.errors.has('price') }"
+                 class="form-input w-full" type="text" name="price" placeholder="Price"
+          >
+          <has-error :form="form" field="price" />
+        </div>
       </div>
     </div>
-    <!-- Checkin -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="checkin">{{ $t('checkin') }}</label>
-      <div class="col-md-7">
-        <input id="checkin" v-model="form.checkin" :class="{ 'is-invalid': form.errors.has('checkin') }" class="form-input w-full" type="date" name="checkin" placeholder="Checkin" required>
-        <has-error :form="form" field="checkin" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="checkin">{{ $t('checkin') }}</label>
+        <div class="col-md-7">
+          <input id="checkin" v-model="form.checkin" :class="{ 'is-invalid': form.errors.has('checkin') }"
+                 class="form-input w-full" type="date" name="checkin" placeholder="Checkin"
+          >
+          <has-error :form="form" field="checkin" />
+        </div>
       </div>
     </div>
-    <!-- Checkout -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="checkout">{{ $t('checkout') }}</label>
-      <div class="col-md-7">
-        <input id="checkout" v-model="form.checkout" :class="{ 'is-invalid': form.errors.has('checkout') }" class="form-input w-full" type="date" name="checkout" placeholder="Checkout" required>
-        <has-error :form="form" field="checkout" />
+
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="checkout">{{ $t('checkout') }}</label>
+        <div class="col-md-7">
+          <input id="checkout" v-model="form.checkout" :class="{ 'is-invalid': form.errors.has('checkout') }" class="form-input w-full" type="date" name="checkout" placeholder="Checkout">
+          <has-error :form="form" field="checkout" />
+        </div>
       </div>
     </div>
     <!-- Guests -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="guests">{{ $t('guests') }}</label>
-      <div class="col-md-7">
-        <input id="guests" v-model="form.guests" :class="{ 'is-invalid': form.errors.has('guests') }" class="form w-full" type="number" name="guests" placeholder="Guests" required>
-        <has-error :form="form" field="guests" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="guests">{{ $t('guests') }}</label>
+        <div class="col-md-7">
+          <input id="guests" v-model="form.guests" :class="{ 'is-invalid': form.errors.has('guests') }" class="form w-full form-input" type="number" name="guests" placeholder="Guests">
+          <has-error :form="form" field="guests" />
+        </div>
       </div>
     </div>
+
     <!-- Rooms -->
-    <div class="mt-4">
-      <label class="col-md-3 col-form-label text-md-right mb-2" for="rooms">{{ $t('rooms') }}</label>
-      <div class="col-md-7">
-        <input id="rooms" v-model="form.rooms" :class="{ 'is-invalid': form.errors.has('rooms') }" class="form-input w-full" type="number" name="rooms" placeholder="Rooms" required>
-        <has-error :form="form" field="rooms" />
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="rooms">{{ $t('rooms') }}</label>
+        <div class="col-md-7">
+          <input id="rooms" v-model="form.rooms" :class="{ 'is-invalid': form.errors.has('rooms') }" class="form-input w-full" type="number" name="rooms" placeholder="Rooms">
+          <has-error :form="form" field="rooms" />
+        </div>
       </div>
     </div>
+
+    <amenities :house-id="houseId" :house-amenities="amenities" />
 
     <!-- Description -->
-    <vue-editor v-model="form.description" class="mt-4" />
+    <vue-editor v-model="form.description" class="mt-4 w-full" required />
+    <br>
+    <br>
+    <br>
 
     <div v-if="form.image && form.image.length > 0" class="px-2 mt-4">
+      <br>
+      <br>
       <div class="flex flex-wrap -mx-2">
         <div v-for="(image, i) in form.image" :key="i" class="w-1/3 px-2 relative mt-4">
           <div class="text-red-700 absolute right-0 mx-4 font-bold text-lg" @click="removeImage(image)">
@@ -152,16 +193,16 @@
       </div>
     </div>
 
-    <div class="mt-4">
-      <div ref="imageUpload" class="p-2 dropzone" />
+    <div class="mt-4 w-full">
+      <div ref="imageUpload" class="p-2 dropzone rounded" />
     </div>
 
     <div class="mt-4 flex flex-col md:flex-row items-start md:items-center justify-between">
       <!-- Submit Button -->
-      <tw-button v-if="type === 'create'" :loading="form.busy">
+      <tw-button v-if="type === 'create'" class="mr-4" :loading="form.busy">
         {{ $t('add') }}
       </tw-button>
-      <tw-button v-else :loading="form.busy">
+      <tw-button v-else class="mr-4" :loading="form.busy">
         {{ $t('update') }}
       </tw-button>
       <a v-if="houseId" class="text-pink-400 font-bold" :loading="form.busy" @click="deleteHouse">
@@ -178,15 +219,17 @@ import Dropzone from 'dropzone'
 import { VueEditor } from 'vue2-editor'
 import TwButton from '../../components/TwButton'
 import Loader from '../../components/Loader'
+import Amenities from './amenities'
 
 export default {
     name: 'HouseForm',
-    components: { Loader, TwButton, VueEditor },
+    components: { Amenities, Loader, TwButton, VueEditor },
     props: ['houseId', 'type'],
     data: () => ({
         remember: false,
         isLoading: false,
         dropzone: null,
+        amenities: [],
         form: new Form({
             name: '',
             country: '',
@@ -237,7 +280,8 @@ export default {
                         this.form[key] = obj[key]
                     }
                 }
-                this.form.image = obj.image;
+                this.amenities = obj.amenity
+                this.form.image = obj.image
 
                 this.isLoading = false
             } catch (error) {

@@ -23,15 +23,13 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
         'name', 'email', 'password',
     ];
 
-
-
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'pivot'
     ];
 
     /**
@@ -120,4 +118,5 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     {
         return $this->hasMany(House::class, 'user_id')->latest('updated_at');
     }
+
 }

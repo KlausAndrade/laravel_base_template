@@ -15,7 +15,7 @@
             <p class="uppercase tracking-wide text-sm font-bold text-gray-700">
               {{ house.name }}
             </p>
-            <p class="text-3xl text-gray-900">
+            <p v-if="house.price" class="text-3xl text-gray-900">
               €{{ house.price | currency }}
             </p>
           </div>
@@ -53,6 +53,7 @@ export default {
     components: { TwButton, VueCarousel },
     filters: {
         currency (value) {
+            if (!value) return;
             return value.toFixed(2)
         }
     },

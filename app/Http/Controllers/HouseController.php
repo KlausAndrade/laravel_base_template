@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Amenity;
 use App\House;
 use App\Image;
 use Illuminate\Http\Request;
@@ -32,22 +33,8 @@ class HouseController extends Controller
     public function store()
     {
         $validData = request()->validate([
-            "address" =>'required',
-            "checkin" =>'required',
-            "checkout" =>'required',
-            "city" =>'required',
-            "country" =>'required',
-            "dedicated" =>'required',
-            "description" =>'required',
-            "guests" =>'required',
             "name" =>'required',
-            "number" =>'required',
-            "price" =>'required',
-            "rooms" =>'required',
-            "space" =>'required',
-            "state" =>'required',
-            "type" =>'required',
-            "zipcode" =>'required',
+            "description" =>'required',
         ]);
 
         $house = auth()->user()->house()->create($validData);
@@ -63,7 +50,7 @@ class HouseController extends Controller
      */
     public function show(House $house)
     {
-        $house->load('image');
+        $house->load(['image', 'amenity']);
         return ['success' => true, 'data' => $house];
     }
 
@@ -81,6 +68,21 @@ class HouseController extends Controller
 
         return response()->json(['success'=> true], 200);
 
+    }
+
+    public function getAmenities(){
+
+        return response()->json(['success' => true, 'data' => Amenity::all()], 200);
+    }
+
+    public function updateHouseAmenities(House $house, Amenity $amenity){
+        if (! $house->amenity->contains($amenity->id)) {
+            $house->amenity()->attach($amenity->id);
+        } else {
+            $house->amenity()->detach($amenity->id);
+        }
+
+        return response()->json(['success' => true], 200);
     }
 
     public function uploadImages(House $house){

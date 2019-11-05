@@ -28,6 +28,8 @@ Route::delete('products/destroy/{product}', 'ProductController@destroy');
 // Houses
 Route::get('houses', 'HouseController@index');
 Route::get('houses/{house}', 'HouseController@show');
+Route::get('houses/{house}/amenities', 'HouseController@getAmenities');
+Route::post('houses/{house}/amenities/{amenity}', 'HouseController@updateHouseAmenities');
 Route::post('houses/store', 'HouseController@store');
 Route::get('houses/edit', 'HouseController@edit');
 Route::post('houses/{house}/images', 'HouseController@uploadImages');
