@@ -95,7 +95,7 @@ class HouseController extends Controller
 
         $images->each(function ($image) use ($house) {
 
-            $path = "/dist/img/houses/{$house->id}/";
+            $path = "/img/houses/{$house->id}/";
             $imageName = Str::random();
             $original = "{$imageName}.". $image->getClientOriginalExtension();
 
