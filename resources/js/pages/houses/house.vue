@@ -23,9 +23,12 @@
             <div class="text-gray-700" v-html="description">
               {{ $t('no_description') }}
             </div>
-            <p v-if="hasViewMore" class="cursor-pointer text-blue-500 mt-2" @click="viewMore = !viewMore">
-              {{ $t('read_more') }}
-            </p>
+
+            <router-link :to="{name: 'houses.show', params: { id: house.id }}">
+              <p v-if="hasViewMore" class="cursor-pointer text-blue-500 mt-2">
+                {{ $t('read_more') }}
+              </p>
+            </router-link>
           </div>
           <div class="px-4 pt-3 pb-4 border-t border-gray-300 bg-gray-100">
             <div class="flex items-center justify-center pt-2">
@@ -53,7 +56,7 @@ export default {
     components: { TwButton, VueCarousel },
     filters: {
         currency (value) {
-            if (!value) return;
+            if (!value) return
             return value.toFixed(2)
         }
     },

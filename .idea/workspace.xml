@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/amenities.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/houses/amenity.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/House.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/House.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HouseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HouseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_04_173007_checkout_controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house-form.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +229,7 @@
       <workItem from="1572103268951" duration="6639000" />
       <workItem from="1572811291216" duration="8486000" />
       <workItem from="1572888345448" duration="11268000" />
-      <workItem from="1572976880446" duration="11104000" />
+      <workItem from="1572976880446" duration="12603000" />
     </task>
     <servers />
   </component>
