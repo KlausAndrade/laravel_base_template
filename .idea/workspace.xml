@@ -3,7 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HouseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HouseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_02_221047_add_plans_to_users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/amenities.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/amenities.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/amenity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/amenity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house-form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house-form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/show.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +242,8 @@
       <workItem from="1572103268951" duration="6639000" />
       <workItem from="1572811291216" duration="8486000" />
       <workItem from="1572888345448" duration="11268000" />
-      <workItem from="1572976880446" duration="13834000" />
+      <workItem from="1572976880446" duration="16136000" />
+      <workItem from="1573151554135" duration="5725000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl mx-auto">
+  <div class="w-full md:px-10 mx-auto">
     <div v-if="$store.getters['auth/role']" class="w-full flex justify-end px-6">
       <router-link :to="{ name: 'houses.create' }" class="btn btn-primary">
         {{ $t('add') }}

@@ -4,7 +4,7 @@
       Amenities
     </h3>
 
-    <div class="flex flex-wrap justify-between my-2">
+    <div class="flex flex-wrap my-2">
       <div v-for="(amenity, i) in amenities" :key="i" @click="updateHouseAmenities(amenity)">
         <amenity :amenity="amenity" :enable="containAmenity(amenity.icon)"></amenity>
       </div>

@@ -2,7 +2,7 @@
   <div v-if="isLoading" class="flex justify-center">
     <loader />
   </div>
-  <form v-else class="px-4 mx-auto flex flex-wrap" @submit.prevent="handleHouse" @keydown="form.onKeydown($event)">
+  <form v-else class="max-w-6xl px-4 mx-auto flex flex-wrap" @submit.prevent="handleHouse" @keydown="form.onKeydown($event)">
     <!-- Name -->
     <div class="w-full md:w-1/2 mt-4">
       <div class="p-2">

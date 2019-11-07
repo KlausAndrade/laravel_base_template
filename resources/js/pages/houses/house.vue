@@ -32,9 +32,6 @@
           </div>
           <div class="px-4 pt-3 pb-4 border-t border-gray-300 bg-gray-100">
             <div class="flex items-center justify-center pt-2">
-              <router-link :to="{name: 'houses.show', params: { id: house.id }}">
-                <TwButton>{{ $t('buy') }}</TwButton>
-              </router-link>
               <router-link v-if="$store.getters['auth/role']" class="font-bold ml-4" :to="{name: 'houses.edit', params: { id: house.id }}">
                 {{ $t('edit') }}
               </router-link>
@@ -76,14 +73,14 @@ export default {
         },
 
         description () {
-            if (this.house.description.length > 80 && !this.viewMore) {
-                return this.house.description.substring(0, 80) + '...'
+            if (this.house.description.length > 190 && !this.viewMore) {
+                return this.house.description.substring(0, 190) + '...'
             }
 
             return this.house.description
         },
         hasViewMore () {
-            return this.house.description.length > 80
+            return this.house.description.length > 190
         }
     },
     methods: {

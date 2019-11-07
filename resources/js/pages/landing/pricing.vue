@@ -32,9 +32,9 @@
                 €5.99 <span class="text-base">/ {{ $t('per_month') }}</span>
               </div>
               <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-                  {{ $t('register') }}
-                </button>
+                <a href="/register?plan=1" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+                  {{ $t('register')+ ' +10' }}
+                </a>
               </div>
             </div>
           </div>
@@ -65,9 +65,9 @@
                 €9.99 <span class="text-base">/ {{ $t('per_month') }}</span>
               </div>
               <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+                <a href="/register?plan=2" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
                   {{ $t('register') }}
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -97,9 +97,9 @@
                 €19.99 <span class="text-base">/ {{ $t('per_month') }}</span>
               </div>
               <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+                <a href="/register?plan=3" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
                   {{ $t('register') }}
-                </button>
+                </a>
               </div>
             </div>
           </div>

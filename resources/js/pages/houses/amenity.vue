@@ -13,6 +13,13 @@ export default {
         return {
             status: this.enable
         }
+    },
+    methods: {
+        toggle () {
+            if (!this.$store.getters['auth/user'].role) return
+
+            this.status = !status
+        }
     }
 }
 </script>

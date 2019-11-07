@@ -44,6 +44,7 @@
     "hero_contact": "Contact us",
     "fullname": "Full name",
     "phone": "Phone",
+    "plan": "Plan",
     "rooms": "Rooms",
     "address": "Address",
     "city": "City",
@@ -96,9 +97,9 @@
     "boats_heading": "Residences at sea?",
     "boats_title": "We also explore boats and yachts",
     "boats_subheading": "Contact us for more information",
-    "boats_contact": "Contacte-us",
+    "boats_contact": "Contact-us",
 
-    "contact": "Contacte us",
+    "contact": "Contact us",
     "leave_message": "Leave a message",
     "message_sent": "Message sent!",
     "pricing": "Price",
@@ -124,7 +125,7 @@
 
     "houses": "Houses",
     "who_we_are": "Who we are",
-    "recommendations": "Reccommendations",
+    "recommendations": "Recommendations",
     "recommend_a_host": "Recommend a host",
     "house_registered": "House successfully registered!",
     "buy": "Buy",
