@@ -6,7 +6,7 @@
     "token_expired_alert_title": "Sessão expirada!",
     "token_expired_alert_text": "Faça login novamente para continuar.",
     "login": "Entrar",
-    "register": "Registrar",
+    "register": "Registe-se",
     "page_not_found": "Página não encontrada",
     "go_home": "Início",
     "logout": "Sair",
@@ -32,7 +32,7 @@
     "password_updated": "Sua senha foi atualizada!",
     "new_password": "Nova senha",
     "login_with": "Façalogin com",
-    "register_with": "Registrar com",
+    "register_with": "Registar com",
     "verify_email": "Checar Email",
     "send_verification_link": "Enviar link de verificação",
     "resend_verification_link": "Reenviar link de verificação ?",
@@ -40,8 +40,8 @@
     "verify_email_address": "Enviamos um e-mail com o link de verificação",
 
     "hero_heading": "Gestão completa do seu alojamento",
-    "hero_title": "Rentabilize sua habitação sem esforço",
-    "hero_subheading": "Faça dinheiro, sem dor de cabeça!",
+    "hero_title": "Porque as férias não são só para os seus clientes",
+    "hero_subheading": "Ganhe dinheiro sem esforço",
 
     "hero_contact": "Contacte-nos",
     "fullname": "Nome completo",
@@ -55,7 +55,7 @@
     "fill_out_field": "Por favor, preencha este campo",
     "send": "Enviar",
 
-    "why": "Por quê?",
+    "why": "Porquê?",
     "cases_title_one": "Zero preocupações",
     "cases_content_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
     "cases_title_two": "Aumente seu rendimento\n",
@@ -111,6 +111,7 @@
     "price_basic_1": "Relatórios mensais",
     "price_basic_2": "Análise de mercado (preços, taxas de ocupação, etc.)",
     "price_basic_3": "Presença nos principais sites de reservas Internacionais.",
+    "price_basic_4": "Comunicação com os hóspedes",
     "price_regular_1": "Plano básico +",
     "price_regular_2": "Relatórios mensais detalhados",
     "price_regular_3": "Divulgação nas redes sociais e SEO.",
@@ -123,13 +124,13 @@
     "per_month": "por mês",
 
     "action_subheading": "Gestão completa do seu alojamento",
-    "action_heading": "Rentabilize sua habitação sem esforço",
+    "action_heading": "Rentabilize a sua habitação sem esforço",
 
     "houses": "Casas",
     "who_we_are": "Quem somos",
     "recommendations": "Recomendações",
     "recommend_a_host": "Recomende um anfitrião",
-    "house_registered": "Casa registrada com sucesso!",
+    "house_registered": "Casa registada com sucesso!",
     "buy": "comprar",
     "no_description": "Sem descrição",
 
@@ -141,6 +142,6 @@
     "edit": "Editar",
     "image": "Imagem",
     "read_more": "Ler mais",
-    "product_registered": "Produto registrado com sucesso!",
+    "product_registered": "Produto registado com sucesso!",
     "something_went_wrong": "Algo deu errado!"
 }

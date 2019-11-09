@@ -22,18 +22,18 @@
                 <li class="border-b py-4">
                   {{ $t('price_basic_2') }}
                 </li>
-                <li class="border-b py-4">
+              <li class="border-b py-4">
                   {{ $t('price_basic_3') }}
-                </li>
+              </li>
+              <li class="border-b py-4">
+                  {{ $t('price_basic_4') }}
+              </li>
               </ul>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                €5.99 <span class="text-base">/ {{ $t('per_month') }}</span>
-              </div>
               <div class="flex items-center justify-center">
                 <a href="/register?plan=1" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-                  {{ $t('register')+ ' +10' }}
+                  {{ $t('register') }}
                 </a>
               </div>
             </div>
@@ -61,9 +61,6 @@
               </ul>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                €9.99 <span class="text-base">/ {{ $t('per_month') }}</span>
-              </div>
               <div class="flex items-center justify-center">
                 <a href="/register?plan=2" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
                   {{ $t('register') }}
@@ -93,9 +90,6 @@
               </ul>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                €19.99 <span class="text-base">/ {{ $t('per_month') }}</span>
-              </div>
               <div class="flex items-center justify-center">
                 <a href="/register?plan=3" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
                   {{ $t('register') }}

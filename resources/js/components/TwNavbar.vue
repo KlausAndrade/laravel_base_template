@@ -2,7 +2,7 @@
   <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-8">
     <div id="home" class="flex items-center flex-no-shrink text-white mr-6">
       <!-- Logo -->
-      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="font-semibold text-xl tracking-tight">
+      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="font-semibold text-3xl tracking-tight">
         {{ appName }}
       </router-link>
     </div>

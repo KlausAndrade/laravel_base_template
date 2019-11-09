@@ -42,7 +42,7 @@
                 <a href="https://www.facebook.com/Just-Book-It-116935079707977/" target="_blank" class="no-underline text-gray-800 hover:text-teal-500">Facebook</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="https://instagram.com/justbookit15?igshid=1uyj0lvra5217" target="_blank" class="no-underline text-gray-800 hover:text-teal-500">Instagram</a>
+                <a href="https://instagram.com/justbookit_pt" target="_blank" class="no-underline text-gray-800 hover:text-teal-500">Instagram</a>
               </li>
             </ul>
           </div>

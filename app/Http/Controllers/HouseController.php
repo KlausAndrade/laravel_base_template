@@ -37,6 +37,10 @@ class HouseController extends Controller
             "description" =>'required',
         ]);
 
+        // :TODO type add house/apartment / OTHERS
+        // :TODO Replace checking checkout por Inicio e fim do contrato
+        // :TODO Remove price
+        // :TODO Remove dedicated
         $house = auth()->user()->house()->create($validData);
 
         return ['success' => true, 'data' => $house];
