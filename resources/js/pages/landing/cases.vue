@@ -42,10 +42,10 @@
         <div class="flex flex-wrap items-center">
           <div class="w-full md:w-1/2 p-6">
             <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              {{ $t('cases_title_one') }}
+              {{ $t('cases_title_three') }}
             </h3>
             <p class="text-gray-600 mb-8">
-              {{ $t('cases_content_one') }}
+              {{ $t('cases_content_three') }}
             </p>
           </div>
           <div class="w-full md:w-1/2 p-6 my-12">

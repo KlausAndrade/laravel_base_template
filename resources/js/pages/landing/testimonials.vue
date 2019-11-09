@@ -17,7 +17,7 @@
         <testimonial>
           {{ $t('testimonials_guest_1') }}
           <template slot="author">
-            <b>Andrade</b>, Klaus
+            <b>Rocha</b>, Gonçalo
           </template>
         </testimonial>
 
@@ -31,7 +31,7 @@
         <testimonial>
           {{ $t('testimonials_guest_3') }}
           <template slot="author">
-            <b>Doe</b>, John
+            <b>Henrique</b>, Fernando
           </template>
         </testimonial>
 
@@ -46,21 +46,21 @@
         <testimonial>
           {{ $t('testimonials_host_1') }}
           <template slot="author">
-            <b>Andrade</b>, Klaus
+            <b>Moura</b>, Marcela
           </template>
         </testimonial>
 
         <testimonial>
           {{ $t('testimonials_host_2') }}
           <template slot="author">
-            <b>Andrade</b>, Klaus
+            <b>Galizia</b>, Giorgia
           </template>
         </testimonial>
 
         <testimonial>
           {{ $t('testimonials_host_3') }}
           <template slot="author">
-            <b>Doe</b>, John
+            <b>Bernardo</b>, Stefani
           </template>
         </testimonial>
       </div>

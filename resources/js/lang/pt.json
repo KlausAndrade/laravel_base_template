@@ -39,7 +39,7 @@
     "failed_to_verify_email": "Falhou ao verificar email.",
     "verify_email_address": "Enviamos um e-mail com o link de verificação",
 
-    "hero_heading": "Gestão completa do seu alojamento",
+    "hero_heading": "Gestão integral do seu alojamento",
     "hero_title": "Porque as férias não são só para os seus clientes",
     "hero_subheading": "Ganhe dinheiro sem esforço",
 
@@ -56,12 +56,12 @@
     "send": "Enviar",
 
     "why": "Porquê?",
-    "cases_title_one": "Zero preocupações",
-    "cases_content_one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
-    "cases_title_two": "Aumente seu rendimento\n",
+    "cases_title_one": "Suporte 24/7",
+    "cases_content_one": "Garantimos suporte 24 horas por dia, 7 dias por semana - agilizando a resolução de qualquer problema",
+    "cases_title_two": "Maior rendimento",
     "cases_content_two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
     "cases_title_three": "10 anos de experiência",
-    "cases_content_three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
+    "cases_content_three": "A nossa equipa tem mais de 10 anos de mercado na gestão e rentabilização imobiliária. O seu imóvel estará em boas mãos!",
 
     "services": "Serviços",
     "services_title_one": "Manutenção",
@@ -96,8 +96,8 @@
     "testimonials_host_2": "Super eficaz! Apartamentos sempre em perfeito estado e ocupação acima de 90% todos os meses!",
     "testimonials_host_3": "Melhor decisão de sempre! Além de ganhar mais dinheiro com o Just Book It, é muito fácil quando eu quero usar minha casa e parar de alugar por um tempo",
 
-    "boats_heading": "Residencias no mar?",
-    "boats_title": "Também exploramos barcos e yachts",
+    "boats_heading": "Residências no mar?",
+    "boats_title": "Também exploramos barcos e iates",
     "boats_subheading": "Entre em contato para mais informações",
     "boats_contact": "Contacte-nos",
 
@@ -123,7 +123,7 @@
 
     "per_month": "por mês",
 
-    "action_subheading": "Gestão completa do seu alojamento",
+    "action_subheading": "Gestão integral do seu alojamento",
     "action_heading": "Rentabilize a sua habitação sem esforço",
 
     "houses": "Casas",
