@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/landing/partners.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TwNavbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TwNavbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/es.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/lang/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/pt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/call-to-action.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/cases.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/pricing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/tailwind/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/tailwind/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/tailwind/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/tailwind/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/partners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/partners.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +236,7 @@
       <workItem from="1573327804143" duration="3811000" />
       <workItem from="1573587625226" duration="1073000" />
       <workItem from="1573758399526" duration="102000" />
-      <workItem from="1574187092955" duration="8934000" />
+      <workItem from="1574187092955" duration="9362000" />
     </task>
     <servers />
   </component>
