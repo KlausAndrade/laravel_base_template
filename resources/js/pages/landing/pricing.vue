@@ -22,12 +22,18 @@
                 <li class="border-b py-4">
                   {{ $t('price_basic_2') }}
                 </li>
-              <li class="border-b py-4">
+                <li class="border-b py-4">
                   {{ $t('price_basic_3') }}
-              </li>
-              <li class="border-b py-4">
+                </li>
+                <li class="border-b py-4">
                   {{ $t('price_basic_4') }}
-              </li>
+                </li>
+                <li class="border-b py-4">
+                  {{ $t('price_basic_5') }}
+                </li>
+                <li class="border-b py-4">
+                  {{ $t('price_basic_6') }}
+                </li>
               </ul>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
@@ -58,6 +64,9 @@
                 <li class="border-b py-4">
                   {{ $t('price_regular_4') }}
                 </li>
+                <li class="border-b py-4">
+                  {{ $t('price_regular_5') }}
+                </li>
               </ul>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
@@ -86,6 +95,9 @@
                 </li>
                 <li class="border-b py-4">
                   {{ $t('price_premium_4') }}
+                </li>
+                <li class="border-b py-4">
+                  {{ $t('price_premium_5') }}
                 </li>
               </ul>
             </div>

@@ -8,7 +8,7 @@
     <boats />
     <call-to-action />
     <transition name="fade">
-      <div v-if="showBackTop" class="fixed bottom-0 right-0 m-4 p-2 rounded bg-teal-500 text-white text-center" @click="backToTop">
+      <div v-if="showBackTop" class="fixed bottom-0 right-0 m-4 p-2 rounded bg-green-500 text-white text-center" @click="backToTop">
         <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
       </div>
     </transition>
@@ -73,7 +73,7 @@ export default {
 <style>
 
   .gradient {
-    background: linear-gradient(90deg, #38b2ac 0%, #2b847f 100%)
+    background: linear-gradient(90deg, #48bb78 0%, #2b847f 100%)
   }
 .top-right {
   position: absolute;

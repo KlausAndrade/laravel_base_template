@@ -26,13 +26,16 @@
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
       </div>
 
-      <h3 class="my-4 text-3xl leading-tight text-teal-200">
+      <h3 class="my-4 text-3xl leading-tight text-green-200">
         {{ $t('action_subheading') }}
       </h3>
-
+<br>
       <router-link :to="{ name: 'register' }" class="mx-auto lg:mx-0 bg-white mt-4 text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-        Register
+        {{ $t('register') }}
       </router-link>
+        <br>
+        <br>
+        <partners></partners>
 
       <modal :show.sync="showRegister">
         <TwButton> {{ $t('send_email') }} </TwButton>
@@ -43,7 +46,9 @@
 
 <script>
 
+import Partners from "./partners";
 export default {
+    components: {Partners},
     data () {
         return {
             showRegister: false

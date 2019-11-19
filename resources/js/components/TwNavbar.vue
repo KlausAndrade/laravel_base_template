@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-8">
+  <nav class="flex items-center justify-between flex-wrap bg-green-500 p-6 mb-8">
     <div id="home" class="flex items-center flex-no-shrink text-white mr-6">
       <!-- Logo -->
       <router-link :to="{ name: user ? 'home' : 'welcome' }" class="font-semibold text-3xl tracking-tight">
@@ -7,7 +7,7 @@
       </router-link>
     </div>
     <div class="block sm:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-teal-300 border-teal-light hover:text-white hover:border-white" @click="toggleNav">
+      <button class="flex items-center px-3 py-2 border rounded text-green-300 border-green-light hover:text-white hover:border-white" @click="toggleNav">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
       </button>
     </div>
@@ -21,7 +21,7 @@
         <router-link :to="{ name: 'settings.profile' }">
           <img :src="user.photo_url" class="w-10 h-10 rounded-full mt-2 md:mt-0 lg:mt-0" :alt="$t('settings')" :title="$t('settings')">
         </router-link>
-        <router-link :to="{ name: 'settings.profile' }" class="text-teal-200 px-2 font-semibold">
+        <router-link :to="{ name: 'settings.profile' }" class="text-green-200 px-2 font-semibold">
           {{ user.name }}
         </router-link>
         <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white mt-4 sm:mt-0" @click.prevent="logout"><fa icon="sign-out-alt" fixed-width />{{ $t('logout') }}</a>
@@ -35,7 +35,7 @@
           </router-link>
         </div>
         <div class="nav-item font-semibold text-white">
-          <router-link :to="{ name: 'register' }" class="border rounded text-white border-white px-4 py-1 hover:bg-teal-600">
+          <router-link :to="{ name: 'register' }" class="border rounded text-white border-white px-4 py-1 hover:bg-green-600">
             {{ $t('register') }}
           </router-link>
         </div>
