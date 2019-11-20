@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/landing/partners.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/landing/partners.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mail/Contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail/Contact.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +239,8 @@
       <workItem from="1573327804143" duration="3811000" />
       <workItem from="1573587625226" duration="1073000" />
       <workItem from="1573758399526" duration="102000" />
-      <workItem from="1574187092955" duration="9362000" />
+      <workItem from="1574187092955" duration="9676000" />
+      <workItem from="1574286240951" duration="2727000" />
     </task>
     <servers />
   </component>

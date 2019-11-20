@@ -29,6 +29,6 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.Contact')->with(['data' => $this->data])->to('klaus1993@live.com');
+        return $this->markdown('mail.Contact')->with(['data' => $this->data]);
     }
 }
