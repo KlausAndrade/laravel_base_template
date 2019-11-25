@@ -23,15 +23,15 @@
             <div class="text-gray-700" v-html="description">
               {{ $t('no_description') }}
             </div>
-
-            <router-link :to="{name: 'houses.show', params: { id: house.id }}">
-              <p v-if="hasViewMore" class="cursor-pointer text-blue-500 mt-2">
-                {{ $t('read_more') }}
-              </p>
-            </router-link>
           </div>
           <div class="px-4 pt-3 pb-4 border-t border-gray-300 bg-gray-100">
             <div class="flex items-center justify-center pt-2">
+
+                <router-link :to="{name: 'houses.show', params: { id: house.id }}">
+                    <p v-if="hasViewMore" class="btn btn-primary">
+                        {{ $t('see_details') }}
+                    </p>
+                </router-link>
               <router-link v-if="$store.getters['auth/role']" class="font-bold ml-4" :to="{name: 'houses.edit', params: { id: house.id }}">
                 {{ $t('edit') }}
               </router-link>
