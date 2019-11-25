@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$store.getters['auth/role'] || house.active" id="house" :class="size" class="mx-auto" style="min-width: 300px;">
+  <div v-if="$store.getters['auth/role'] || house.active" id="house" :class="size" class="" style="min-width: 300px;">
     <div class="flex items-center justify-center">
       <div class="w-full sm:w-full lg:w-full py-6 px-3">
         <div class="bg-white shadow-xl rounded-lg overflow-hidden">

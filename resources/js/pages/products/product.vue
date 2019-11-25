@@ -1,5 +1,5 @@
 <template>
-  <div id="product" v-if="$store.getters['auth/role'] || product.active" :class="size" class="mx-auto" style="min-width: 300px;">
+  <div id="product" v-if="$store.getters['auth/role'] || product.active" :class="size" class="" style="min-width: 300px;">
     <div class="flex items-center justify-center">
       <div class="w-full sm:w-full lg:w-full py-6 px-3">
         <div class="bg-white shadow-xl rounded-lg overflow-hidden">
