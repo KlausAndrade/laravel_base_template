@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center">
       <div class="w-full sm:w-full lg:w-full py-6 px-3">
         <div class="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div class="relative">
+          <div class="relative h-56">
             <div v-if="$store.getters['auth/role']" class="text-right absolute z-30 right-0 top-0 px-1 m-1 bg-white shadow" title="Show or hide house for customers">
               <input v-model="house.active" type="checkbox" @click="updateActive(house)">
             </div>
