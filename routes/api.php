@@ -74,6 +74,8 @@ Route::prefix('mail')->group(function () {
 
 // Checkout
 Route::prefix('checkout')->group(function () {
+
+    Route::get('invoice', 'CheckoutController@generateInvoice');
     Route::get('intent-payment-method', 'CheckoutController@intentPaymentMethod');
     Route::post('cart', 'CheckoutController@cart');
     Route::post('charge', 'CheckoutController@charge');

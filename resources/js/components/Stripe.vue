@@ -1,10 +1,9 @@
 <template>
-  <form id="payment-form" action="/api/checkout/charge" method="post">
+  <form id="payment-form" @click.prevent="">
     <div class="form-row">
       <label for="card-element">
         Credit or debit card
       </label>
-
 
       <div id="card-element">
         <!-- A Stripe Element will be inserted here. -->
@@ -14,8 +13,13 @@
       <div id="card-errors" role="alert" />
     </div>
 
-      <button v-if="client" id="card-button" :data-secret="client.client_secret">Payment method</button>
-      <button>Submit Payment</button>
+    <button v-if="client" id="card-button" class="btn btn-primary" :data-secret="client.client_secret">
+      Payment method
+    </button>
+    <!--    <button>Submit Payment</button>-->
+    <button @click.prevent="generateInvoice">
+      Buys
+    </button>
   </form>
 </template>
 
@@ -26,15 +30,17 @@ import axios from 'axios'
 let stripe = Stripe(process.env.MIX_STRIPE)
 let elements = stripe.elements()
 //
-// const cardHolderName = document.getElementById('card-holder-name')
-// const cardButton = document.getElementById('card-button')
+const cardHolderName = document.getElementById('card-holder-name')
+const cardButton = document.getElementById('card-button')
 // const clientSecret = cardButton.dataset.secret
+// console.log(clientSecret)
 
 export default {
 
     data () {
         return {
-            client: null
+            client: null,
+            paymentMethod: null
         }
     },
     beforeMount () {
@@ -67,21 +73,23 @@ export default {
         // Add an instance of the card Element into the `card-element` <div>.
         card.mount('#card-element')
 
-        cardButton.addEventListener('click', async (e) => {
-            const { setupIntent, error } = await stripe.handleCardSetup(
-                clientSecret, card, {
-                    payment_method_data: {
-                        billing_details: { name: cardHolderName.value }
-                    }
-                }
-            );
+        setTimeout(function () {
+            if (cardButton) {
+                cardButton.addEventListener('click', async (e) => {
+                    const { paymentMethod, error } = await stripe.createPaymentMethod(
+                        'card', card, {
+                            billing_details: { name: cardHolderName.value }
+                        }
+                    )
 
-            if (error) {
-                // Display "error.message" to the user...
-            } else {
-                // The card has been verified successfully...
+                    if (error) {
+                        alert(error)
+                    } else {
+                        this.paymentMethod = paymentMethod
+                    }
+                })
             }
-        });
+        }, 3000)
 
         // Handle real-time validation errors from the card Element.
         card.addEventListener('change', function (event) {
@@ -122,6 +130,16 @@ export default {
 
             // Submit the form
             form.submit()
+        }
+    },
+
+    methods: {
+
+        generateInvoice () {
+            axios.get(`/api/checkout/invoice`)
+                .then(({ data }) => {
+                    console.log(data)
+                })
         }
     }
 }

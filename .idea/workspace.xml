@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Links.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Links.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mail/Contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail/Contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Stripe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Stripe.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,18 +164,18 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\klaus\code\jbi\public" />
+      <recent name="C:\Users\klaus\code\jbi\public\dist\img\icons\amenities" />
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
+      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages\houses" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\components" />
       <recent name="C:\Users\klaus\code\jbi" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages" />
       <recent name="C:\Users\klaus\code\jbi\resources\js\pages\products" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\klaus\code\jbi\public" />
-      <recent name="C:\Users\klaus\code\jbi\public\dist\img\icons\amenities" />
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img\shared" />
-      <recent name="C:\Users\klaus\code\base-template\public\dist\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,7 +241,8 @@
       <workItem from="1573587625226" duration="1073000" />
       <workItem from="1573758399526" duration="102000" />
       <workItem from="1574187092955" duration="9676000" />
-      <workItem from="1574286240951" duration="2727000" />
+      <workItem from="1574286240951" duration="5018000" />
+      <workItem from="1574704712938" duration="6707000" />
     </task>
     <servers />
   </component>
