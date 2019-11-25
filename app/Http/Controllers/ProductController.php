@@ -82,7 +82,7 @@ class ProductController extends Controller
 
         $images->each(function ($image) use ($product) {
 
-            $path = "/dist/img/products/{$product->id}/";
+            $path = "/img/products/{$product->id}/";
             $imageName = Str::random();
             $original = "{$imageName}.". $image->getClientOriginalExtension();
 
