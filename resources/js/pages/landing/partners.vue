@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="w-full mt-8 my-2 text-5xl font-bold leading-tight text-center text-white">
-      Nossos parceiros
+      {{$t('our_partners')}}
     </h1>
     <div class="w-full mb-4">
       <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
