@@ -6,7 +6,7 @@
         <div class="w-full flex flex-col md:flex-row py-6">
           <div class="flex-1 mb-6">
               <router-link class="text-green-500 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" :to="{ name: 'home' }">
-                  Just book It
+                  <img src="/img/logo/just-book-it-logo.svg" :alt="appName + ' logo'" class="w-48" />
               </router-link>
           </div>
 

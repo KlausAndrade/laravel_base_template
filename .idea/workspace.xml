@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7039ff-add2-497c-a0f6-a52a575c923f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/base-template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/base-template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/house.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/houses/houses.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/houses/houses.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/products/products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/products/products.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +146,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/pages/houses" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../knowmore" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -242,6 +239,8 @@
       <workItem from="1574187092955" duration="9676000" />
       <workItem from="1574286240951" duration="5018000" />
       <workItem from="1574704712938" duration="10129000" />
+      <workItem from="1574972673444" duration="607000" />
+      <workItem from="1575284759564" duration="73000" />
     </task>
     <servers />
   </component>

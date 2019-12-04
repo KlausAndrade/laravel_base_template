@@ -3,7 +3,7 @@
     <div id="home" class="flex items-center flex-no-shrink text-white mr-6">
       <!-- Logo -->
       <router-link :to="{ name: user ? 'home' : 'welcome' }" class="font-semibold text-3xl tracking-tight">
-        {{ appName }}
+        <img src="/img/logo/just-book-it-logo-white.svg" :alt="appName + ' logo'" class="w-32" />
       </router-link>
     </div>
     <div class="block sm:hidden">
