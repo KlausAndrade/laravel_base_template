@@ -1,6 +1,6 @@
 <template>
   <transition v-if="show" name="fade">
-    <div v-if="show" @click.self="dismiss" class="bg-modal bottom-0 fixed h-full flex items-center justify-center left-0 modal right-0 top-0 w-full z-30">
+    <div v-if="show" @click.self="dismiss" class="bg-modal bottom-0 fixed h-full flex items-center justify-center left-0 modal right-0 top-0 w-full z-40">
       <div :class="classes" class="bg-white p-2 rounded min-h-modal min-w-modal max-h-modal max-w-modal flex items-center justify-center">
         <div class="-mt-3 absolute close mr-4 right-0 text-5xl text-white top-0" @click="dismiss">
           &times;
