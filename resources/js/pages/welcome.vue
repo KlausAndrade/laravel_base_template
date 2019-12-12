@@ -8,8 +8,16 @@
     <boats />
     <call-to-action />
     <transition name="fade">
-      <div v-if="showBackTop" class="fixed bottom-0 right-0 m-4 p-2 rounded bg-green-500 text-white text-center" @click="backToTop">
-        <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+      <div v-if="showBackTop" class="fixed bottom-0 right-0 m-4 text-right" @click="backToTop">
+        <span class="mb-2 ">
+          <b>Contacte-nos</b> <br>
+          <a class="" href="mailto:master@jbi.pt">master@jbi.pt</a> <br>
+          <a class="" href="tel:915 434 634">+351 918 037 611</a> <br>
+          <a class="" href="tel:915 434 634">+351 915 434 634</a>
+        </span>
+        <div class="p-2 rounded bg-green-500 text-white text-center w-10 mt-2 ml-auto">
+            <svg class="text-white fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill-rule="evenodd" clip-rule="evenodd"><path d="M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z" /></svg>
+        </div>
       </div>
     </transition>
   </div>
