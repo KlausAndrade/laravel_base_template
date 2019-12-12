@@ -15,7 +15,7 @@
             <p class="uppercase tracking-wide text-sm font-bold text-gray-700">
               {{ product.name }}
             </p>
-            <p class="text-3xl text-gray-900">
+            <p class="text-3xl text-gray-900" v-if="product.price > 0">
               €{{ product.price | currency }}
             </p>
           </div>
