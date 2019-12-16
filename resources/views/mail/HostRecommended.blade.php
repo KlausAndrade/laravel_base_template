@@ -7,13 +7,16 @@ entrou em contacto através do site JBI.
 | | |
 | ------------- |---------------|
 | Nome          | {{ $data['name'] }}      |
-| Email         | [{{$data['email']}}](mailto:email@example.com) |
+| Email         | [{{$data['email']}}](mailto:{{$data['email']}}) |
 | Telefone      | {{$data['phone']}} |
-| Mensagem      | {{$data['message']}} |
+| ------------- |---------------|
+| Nome do amigo/a          | {{ $data['name'] }}      |
+| Email         | [{{$data['friend']['email']}}](mailto:{{$data['friend']['email']}}) |
+| Telefone      | {{$data['friend']['phone']}} |
 @endcomponent
 
 
-@component('mail::button', ['url' => "mailto:{$data['email']}"])
+@component('mail::button', ['url' => "mailto:{$data['friend']['email']}"])
 Responder
 @endcomponent
 

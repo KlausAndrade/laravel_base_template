@@ -11,12 +11,12 @@ class ContactController extends Controller
 {
     public function recommendHost(){
         try {
-            (new HostRecommended(request()->all()));
+            Mail::to('klaus1993@live.com')->send(new HostRecommended(request()->all()));
 
             return response(['success' => true], 200);
 
         }catch (\Exception $e) {
-            return response(['success' => false], 500);
+            return response(['success' => false, 'message' => $e->getMessage()], 500);
         }
     }
     public function contact(){
@@ -24,11 +24,12 @@ class ContactController extends Controller
             $data = request()->only(['name','email', 'phone', 'message']);
 
             Mail::to('klaus1993@live.com')->send(new Contact($data));
-            Mail::to(request('mail'))->send(new Contact($data));
+            // Mail::to(request('mail'))->send(new Contact($data));
 
             return response(['success' => true], 200);
 
         }catch (\Exception $e) {
+            dd($e->getMessage());
             return response(['success' => false, 'message' => $e->getMessage()], 500);
         }
     }
