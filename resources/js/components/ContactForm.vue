@@ -13,7 +13,7 @@
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="px-2">
         <p>
-          {{ $t('can_contact_us_message') }} <a class="text-green-400" href="mailto:master@jbi.pt">master@jbi.pt</a>.
+          {{ $t('can_contact_us_message') }} <a class="text-green-400" href="mailto:geral@jbi.pt">geral@jbi.pt</a>.
         </p>
           <p><a href="phone:+351 918 037 611" class="text-green-400"> +351 918 037 611 </a> </p>
           <p><a href="phone:+351 915 434 634" class="text-green-400"> +351 915 434 634 </a> </p>

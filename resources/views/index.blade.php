@@ -14,7 +14,7 @@ $config = [
   <link rel="icon" type="image/png" href="/img/logo/fav.png">
 
   <title>{{ config('app.name') }}</title>
-  <script src="https://js.stripe.com/v3/"></script>
+  {{-- <script src="https://js.stripe.com/v3/"></script> --}}
 
   <link rel="stylesheet" href="{{ mix('dist/css/app.css') }}">
 </head>

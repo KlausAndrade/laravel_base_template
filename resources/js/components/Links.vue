@@ -52,7 +52,8 @@ export default {
 <style scoped>
 
     .ribbon {
-        position: relative;
+        position: absolute;
+        right: 16px;
         padding-bottom: 30px;
         background-size: cover;
         color: white;

@@ -42,11 +42,9 @@ Route::delete('houses/destroy/{house}', 'HouseController@destroy');
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('logout', 'Auth\LoginController@logout');
 
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
 
     // Settings
+    Route::get('/user', 'Settings\ProfileController@getUser');
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
     Route::patch('settings/manage/role', 'Settings\UserController@update');
@@ -80,4 +78,3 @@ Route::prefix('checkout')->group(function () {
     Route::post('cart', 'CheckoutController@cart');
     Route::post('charge', 'CheckoutController@charge');
 });
-

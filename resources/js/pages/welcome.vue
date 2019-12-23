@@ -11,7 +11,7 @@
       <div v-if="showBackTop" class="fixed bottom-0 right-0 m-4 text-right" @click="backToTop">
         <span class="mb-2 ">
           <b>Contacte-nos</b> <br>
-          <a class="" href="mailto:master@jbi.pt">master@jbi.pt</a> <br>
+          <a class="" href="mailto:geral@jbi.pt">geral@jbi.pt</a> <br>
           <a class="" href="tel:915 434 634">+351 918 037 611</a> <br>
           <a class="" href="tel:915 434 634">+351 915 434 634</a>
         </span>

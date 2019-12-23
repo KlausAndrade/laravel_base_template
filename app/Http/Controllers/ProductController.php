@@ -54,7 +54,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $product->load('image');
-        $product->stripe = Config::get('services.stripe.key');
+        // $product->stripe = Config::get('services.stripe.key');
         return ['success' => true, 'data' => $product];
     }
 
