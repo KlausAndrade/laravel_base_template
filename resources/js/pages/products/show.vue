@@ -25,6 +25,12 @@
 
               </div>
 
+              <div class="">
+                <button class="btn btn-primary mt-4" @click="showContact = !showContact">
+                  {{ $t('interested') }}
+                </button>
+              </div>
+
           </div>
         </div>
 <!--        <div class="w-full md:w-6/12 lg:w-3/12 my-2">-->
@@ -39,24 +45,31 @@
 <!--        </div>-->
       </div>
     </div>
+    <modal :show.sync="showContact">
+      <contact-form :product-message="productMessage" class="p-6" />
+    </modal>
   </section>
 </template>
 
 <script>
-import Product from './product'
 import axios from 'axios'
 import VueCarousel from '@chenfengyuan/vue-carousel'
+import ContactForm from '../../components/ContactForm'
 
 export default {
     name: 'Show',
-    components: { Product, VueCarousel },
+    components: { VueCarousel, ContactForm },
     data () {
         return {
-            product: ''
+            product: '',
+            showContact: false
         }
     },
     computed: {
-
+        productMessage () {
+          if (!this.product) return ''
+          return `Olá, \nEstou interessado em adquirir este produto (${this.product.name})! \nMeus cumprimentos.`
+        },
         images () {
             if (!this.product.image) return []
             return this.product.image.map((image) => `<img src="${image.url}" />`)

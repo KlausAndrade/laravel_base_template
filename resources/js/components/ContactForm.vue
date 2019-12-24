@@ -86,13 +86,14 @@ import Success from './Success'
 export default {
     name: 'ContactForm',
     components: { Success, Loader, TwButton },
+    props: ['productMessage'],
     data () {
         return {
             form: new Form({
                 name: '',
                 email: '',
                 phone: '',
-                message: ''
+                message: this.productMessage || ''
             }),
             isSending: false,
             sent: false
