@@ -31,9 +31,6 @@
                 <li class="border-b py-4">
                   {{ $t('price_basic_5') }}
                 </li>
-                <li class="border-b py-4">
-                  {{ $t('price_basic_6') }}
-                </li>
               </ul>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
@@ -92,9 +89,6 @@
                 </li>
                 <li class="border-b py-4">
                   {{ $t('price_premium_3') }}
-                </li>
-                <li class="border-b py-4">
-                  {{ $t('price_premium_4') }}
                 </li>
                 <li class="border-b py-4">
                   {{ $t('price_premium_5') }}
