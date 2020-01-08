@@ -1,14 +1,14 @@
 <template>
   <!-- Top nav links -->
-  <div class="text-sm sm:flex-grow flex mt-10" :class="colors">
-    <a href="/#pricing" class="block mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('pricing') }}</a>
-    <a href="/#services" class="block mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('services') }}</a>
-    <a href="/#recommendations" class="block mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('recommendations') }}</a>
-    <a href="/houses" class="block mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('houses') }}</a>
-    <a href="/products" class="block mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('products') }}</a>
-<!--    <a href="/#who_we_are" class="block mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('who_we_are') }}</a>-->
-    <a class="block cursor-pointer mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color" @click="showContact = true">{{ $t('contact') }}</a>
-    <a class="recommend cursor-pointer border relative border-white rounded py-2 px-4 lg:inline-block lg:mt-0 mr-4 text-yellow-400 text-xl"
+  <div class="text-sm sm:flex-grow flex flex-wrap mt-10" :class="colors">
+    <a href="/#pricing" class="block w-full md:w-auto mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('pricing') }}</a>
+    <a href="/#services" class="block w-full md:w-auto mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('services') }}</a>
+    <a href="/#recommendations" class="block w-full md:w-auto mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('recommendations') }}</a>
+    <a href="/houses" class="block w-full md:w-auto mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('houses') }}</a>
+    <a href="/products" class="block w-full md:w-auto mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('products') }}</a>
+<!--    <a href="/#who_we_are" class="block w-full md:w-auto mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color">{{ $t('who_we_are') }}</a>-->
+    <a class="block w-full md:w-auto cursor-pointer mt-4 text-lg lg:inline-block lg:mt-0 mr-4" :class="color" @click="showContact = true">{{ $t('contact') }}</a>
+    <a class="recommend cursor-pointer border relative border-white rounded py-2 px-4 lg:inline-block lg:mt-0 mr-4 text-yellow-400 text-xl mt-8"
        :class="color" @click="showRecommend = true"
        style="width: 288px;top:-10px">
         {{ $t('recommend_a_host') }}

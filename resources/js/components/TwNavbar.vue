@@ -28,14 +28,14 @@
       </div>
 
       <!-- Guest -->
-      <template v-else>
-        <div class="nav-item mr-4 font-semibold text-white">
-          <router-link :to="{ name: 'login' }" class="">
+      <template v-else class="flex">
+        <div class="nav-item mr-4 font-semibold text-white py-2 mb-2">
+          <router-link :to="{ name: 'login' }" class="mb-4">
             {{ $t('login') }}
           </router-link>
         </div>
-        <div class="nav-item font-semibold text-white">
-          <router-link :to="{ name: 'register' }" class="border rounded text-white border-white px-4 py-1 hover:bg-green-600">
+        <div class="nav-item font-semibold border rounded text-white border-white hover:bg-green-600 py-2">
+          <router-link :to="{ name: 'register' }" class=" px-4 py-1 ">
             {{ $t('register') }}
           </router-link>
         </div>

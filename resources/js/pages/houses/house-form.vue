@@ -108,45 +108,24 @@
         </div>
       </div>
     </div>
-    <!-- Dedicated -->
     <div class="w-full md:w-1/2 mt-4">
       <div class="p-2">
-        <label class="col-md-3 col-form-label text-md-right mb-2" for="dedicated">{{ $t('dedicated') }}</label>
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="start_contract">{{ $t('start_contract') }}</label>
         <div class="col-md-7">
-          <input id="dedicated" v-model="form.dedicated" class="form-checkbox" type="checkbox" name="dedicated">
-        </div>
-      </div>
-    </div>
-    <!-- Price -->
-    <div class="w-full md:w-1/2 mt-4">
-      <div class="p-2">
-        <label class="col-md-3 col-form-label text-md-right mb-2" for="price">{{ $t('price') }}</label>
-        <div class="col-md-7">
-          <input id="price" v-model="form.price" :class="{ 'is-invalid': form.errors.has('price') }"
-                 class="form-input w-full" type="text" name="price" placeholder="Price"
+          <input id="start_contract" v-model="form.start" :class="{ 'is-invalid': form.errors.has('start_contract') }"
+                 class="form-input w-full" type="date" name="start_contract" placeholder="start_contract"
           >
-          <has-error :form="form" field="price" />
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 mt-4">
-      <div class="p-2">
-        <label class="col-md-3 col-form-label text-md-right mb-2" for="checkin">{{ $t('checkin') }}</label>
-        <div class="col-md-7">
-          <input id="checkin" v-model="form.checkin" :class="{ 'is-invalid': form.errors.has('checkin') }"
-                 class="form-input w-full" type="date" name="checkin" placeholder="Checkin"
-          >
-          <has-error :form="form" field="checkin" />
+          <has-error :form="form" field="start" />
         </div>
       </div>
     </div>
 
     <div class="w-full md:w-1/2 mt-4">
       <div class="p-2">
-        <label class="col-md-3 col-form-label text-md-right mb-2" for="checkout">{{ $t('checkout') }}</label>
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="end_contract">{{ $t('end_contract') }}</label>
         <div class="col-md-7">
-          <input id="checkout" v-model="form.checkout" :class="{ 'is-invalid': form.errors.has('checkout') }" class="form-input w-full" type="date" name="checkout" placeholder="Checkout">
-          <has-error :form="form" field="checkout" />
+          <input id="end_contract" v-model="form.end" :class="{ 'is-invalid': form.errors.has('end_contract') }" class="form-input w-full" type="date" name="end_contract" placeholder="end_contract">
+          <has-error :form="form" field="end" />
         </div>
       </div>
     </div>
@@ -168,6 +147,20 @@
         <div class="col-md-7">
           <input id="rooms" v-model="form.rooms" :class="{ 'is-invalid': form.errors.has('rooms') }" class="form-input w-full" type="number" name="rooms" placeholder="Rooms">
           <has-error :form="form" field="rooms" />
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lang -->
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="p-2">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="type">{{ $t('language') }}</label>
+        <div class="col-md-7">
+          <select id="type" v-model="form.lang" class="form-select w-full">
+            <option v-for="(lang, i) in $store.state.lang.locales" :value="lang.toLocaleLowerCase()">
+              {{ lang }}
+            </option>
+          </select>
         </div>
       </div>
     </div>
@@ -240,14 +233,13 @@ export default {
             zipcode: '',
             type: '',
             space: '',
-            dedicated: false,
-            price: '',
-            checkin: '',
-            checkout: '',
+            start: '',
+            end: '',
             guests: '',
             rooms: '',
             description: '',
-            active: ''
+            active: '',
+            lang: "pt"
         })
 
     }),
@@ -257,7 +249,13 @@ export default {
             acceptedFiles: 'image/*',
             autoProcessQueue: this.type === 'edit'
         })
+        this.form.lang = this.lang;
         if (this.type === 'edit') this.getHouse()
+    },
+    computed: {
+      lang(){
+        return this.$store.state.lang.locale;
+      }
     },
     methods: {
         handleHouse () {

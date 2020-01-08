@@ -22,7 +22,9 @@ class HouseController extends Controller
      */
     public function index()
     {
-        return ['success' => true, 'data' => House::orderBy('created_at','desc')->with('image')->get()];
+        $houses = House::where('lang', request('lang'))->orderBy('created_at','desc')->with('image')->get();
+
+        return ['success' => true, 'data' => $houses];
     }
 
     /**
@@ -31,16 +33,13 @@ class HouseController extends Controller
      * @return array
      */
     public function store()
-    {
+    { 
         $validData = request()->validate([
             "name" =>'required',
             "description" =>'required',
+            "lang" => 'required'
         ]);
 
-        // :TODO type add house/apartment / OTHERS
-        // :TODO Replace checking checkout por Inicio e fim do contrato
-        // :TODO Remove price
-        // :TODO Remove dedicated
         $house = auth()->user()->house()->create($validData);
 
         return ['success' => true, 'data' => $house];

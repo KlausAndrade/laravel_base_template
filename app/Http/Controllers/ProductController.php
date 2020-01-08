@@ -23,7 +23,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ['success' => true, 'data' => Product::orderBy('created_at','desc')->with('image')->get()];
+        $products = Product::where('lang', request('lang'))->orderBy('created_at','desc')->with('image')->get();
+        return ['success' => true, 'data' => $products];
     }
 
     /**
@@ -38,6 +39,7 @@ class ProductController extends Controller
             'name' => 'required',
             'price' => 'required',
             'description' => 'required',
+            "lang" => 'required'
         ]);
 
         $product = Product::create($validData);
