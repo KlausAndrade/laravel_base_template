@@ -32,7 +32,7 @@ export default {
   methods: {
     async getProducts () {
       try {
-        const { data } = await axios.get('/api/products')
+        const { data } = await axios.get(`/api/products?lang=${this.$store.state.lang.locale}`)
         this.products = data.data
         this.isLoading = false
       } catch (error) {

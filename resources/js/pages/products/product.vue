@@ -59,7 +59,7 @@ export default {
   },
   props: {
     product: { required: true },
-    size: { default: 'max-w-6xl w-1/3' }
+    size: { default: 'max-w-6xl w-full md:w-1/3' }
   },
   data () {
     return {

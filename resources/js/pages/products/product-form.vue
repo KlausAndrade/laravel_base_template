@@ -2,9 +2,11 @@
   <div v-if="isLoading" class="flex justify-center">
     <loader />
   </div>
-  <form v-else class="px-4 max-w-2xl mx-auto" @submit.prevent="handleProduct" @keydown="form.onKeydown($event)">
+  <form v-else class="px-4 max-w-2xl mx-auto " @submit.prevent="handleProduct" @keydown="form.onKeydown($event)">
+    <div class="flex flex-wrap">
+      
     <!-- Name -->
-    <div class="mt-4">
+    <div class="mt-4 w-full ">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="name">{{ $t('name') }}</label>
       <div class="col-md-7">
         <input id="name" v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-input w-full" type="text" name="name" placeholder="Product name" required>
@@ -12,12 +14,27 @@
       </div>
     </div>
     <!-- Price -->
-    <div class="mt-4">
+    <div class="w-full md:w-1/2 mt-4">
       <label class="col-md-3 col-form-label text-md-right mb-2" for="price">{{ $t('price') }}</label>
       <div class="col-md-7">
         <input id="price" v-model="form.price" :class="{ 'is-invalid': form.errors.has('price') }" class="form-input w-full" type="text" name="price" placeholder="Price in cents" required>
         <has-error :form="form" field="price" />
       </div>
+    </div>
+    
+    <!-- Lang -->
+    <div class="w-full md:w-1/2 mt-4">
+      <div class="md:pl-8">
+        <label class="col-md-3 col-form-label text-md-right mb-2" for="type">{{ $t('language') }}</label>
+        <div class="col-md-7">
+          <select id="type" v-model="form.lang" class="form-select w-full">
+            <option v-for="(lang, i) in $store.state.lang.locales" :value="lang.toLocaleLowerCase()">
+              {{ lang }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
     </div>
 
     <!-- Description -->
@@ -73,7 +90,8 @@ export default {
             name: '',
             price: '',
             description: '',
-            image: ''
+            image: '',
+            lang: "pt"
         })
 
     }),
@@ -84,6 +102,11 @@ export default {
             autoProcessQueue: this.type === 'edit'
         })
         if (this.type === 'edit') this.getProduct()
+    },
+    computed: {
+      lang(){
+        return this.$store.state.lang.locale;
+      }
     },
     methods: {
         handleProduct () {

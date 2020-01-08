@@ -32,7 +32,7 @@ export default {
   methods: {
     async getHouse () {
       try {
-        const { data } = await axios.get('/api/houses')
+        const { data } = await axios.get(`/api/houses?lang=${this.$store.state.lang.locale}`)
         this.houses = data.data
         this.isLoading = false
       } catch (error) {
