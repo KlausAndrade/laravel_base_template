@@ -77,7 +77,7 @@
             </p>
           </div>
         </div>
-      <div class="text-center mx-auto">
+      <div class="bg-white mx-auto pb-8 px-6 rounded shadow text-center">
         <h4 class="font-bold text-xl my-4">{{ $t('services_individual_header') }}</h4>
         <p class="max-w-3xl">{{ $t('services_individual_content') }}</p>
       </div>
