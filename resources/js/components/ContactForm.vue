@@ -15,7 +15,6 @@
         <p>
           {{ $t('can_contact_us_message') }} <a class="text-green-400" href="mailto:geral@jbi.pt">geral@jbi.pt</a>.
         </p>
-          <p><a href="phone:+351 918 037 611" class="text-green-400"> +351 918 037 611 </a> </p>
           <p><a href="phone:+351 915 434 634" class="text-green-400"> +351 915 434 634 </a> </p>
           <br>
       </div>
