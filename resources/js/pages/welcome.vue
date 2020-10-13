@@ -12,7 +12,6 @@
         <span class="mb-2 ">
           <b>Contacte-nos</b> <br>
           <a class="" href="mailto:geral@jbi.pt">geral@jbi.pt</a> <br>
-          <a class="" href="tel:915 434 634">+351 918 037 611</a> <br>
           <a class="" href="tel:915 434 634">+351 915 434 634</a>
         </span>
         <div class="p-2 rounded bg-green-500 text-white text-center w-10 mt-2 ml-auto">
